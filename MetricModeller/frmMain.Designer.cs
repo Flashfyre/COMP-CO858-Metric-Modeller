@@ -41,151 +41,165 @@
             this.txtInterfaces = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.cbInput = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbOutput = new System.Windows.Forms.ComboBox();
+            this.cbInquiry = new System.Windows.Forms.ComboBox();
+            this.cbMasterFiles = new System.Windows.Forms.ComboBox();
+            this.cbInterfaces = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cbLines
             // 
             this.cbLines.FormattingEnabled = true;
-            this.cbLines.Location = new System.Drawing.Point(157, 52);
+            this.cbLines.Location = new System.Drawing.Point(236, 80);
+            this.cbLines.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbLines.Name = "cbLines";
-            this.cbLines.Size = new System.Drawing.Size(121, 21);
+            this.cbLines.Size = new System.Drawing.Size(180, 28);
             this.cbLines.TabIndex = 0;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(157, 79);
+            this.comboBox2.Location = new System.Drawing.Point(236, 122);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(180, 28);
             this.comboBox2.TabIndex = 1;
             // 
             // lblLines
             // 
             this.lblLines.AutoSize = true;
-            this.lblLines.Location = new System.Drawing.Point(97, 55);
+            this.lblLines.Location = new System.Drawing.Point(146, 85);
+            this.lblLines.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLines.Name = "lblLines";
-            this.lblLines.Size = new System.Drawing.Size(54, 13);
+            this.lblLines.Size = new System.Drawing.Size(78, 20);
             this.lblLines.TabIndex = 2;
             this.lblLines.Text = "# of Lines";
-            this.lblLines.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(97, 82);
+            this.lblLanguage.Location = new System.Drawing.Point(146, 126);
+            this.lblLanguage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(55, 13);
+            this.lblLanguage.Size = new System.Drawing.Size(81, 20);
             this.lblLanguage.TabIndex = 3;
             this.lblLanguage.Text = "Language";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(157, 106);
+            this.comboBox3.Location = new System.Drawing.Point(236, 163);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(180, 28);
             this.comboBox3.TabIndex = 4;
             // 
             // lblPeople
             // 
             this.lblPeople.AutoSize = true;
-            this.lblPeople.Location = new System.Drawing.Point(89, 109);
+            this.lblPeople.Location = new System.Drawing.Point(134, 168);
+            this.lblPeople.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeople.Name = "lblPeople";
-            this.lblPeople.Size = new System.Drawing.Size(62, 13);
+            this.lblPeople.Size = new System.Drawing.Size(89, 20);
             this.lblPeople.TabIndex = 5;
             this.lblPeople.Text = "# of People";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 156);
+            this.label1.Location = new System.Drawing.Point(190, 240);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Input";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(119, 183);
+            this.label2.Location = new System.Drawing.Point(178, 282);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Output";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 210);
+            this.label3.Location = new System.Drawing.Point(180, 323);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Inquiry";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 240);
+            this.label4.Location = new System.Drawing.Point(142, 369);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Master Files";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(104, 268);
+            this.label5.Location = new System.Drawing.Point(156, 412);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 14;
             this.label5.Text = "Interfaces";
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(164, 153);
+            this.txtInput.Location = new System.Drawing.Point(246, 235);
+            this.txtInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(100, 20);
+            this.txtInput.Size = new System.Drawing.Size(148, 26);
             this.txtInput.TabIndex = 15;
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(164, 180);
+            this.txtOutput.Location = new System.Drawing.Point(246, 277);
+            this.txtOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(100, 20);
+            this.txtOutput.Size = new System.Drawing.Size(148, 26);
             this.txtOutput.TabIndex = 16;
             // 
             // txtInquiry
             // 
-            this.txtInquiry.Location = new System.Drawing.Point(164, 207);
+            this.txtInquiry.Location = new System.Drawing.Point(246, 318);
+            this.txtInquiry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInquiry.Name = "txtInquiry";
-            this.txtInquiry.Size = new System.Drawing.Size(100, 20);
+            this.txtInquiry.Size = new System.Drawing.Size(148, 26);
             this.txtInquiry.TabIndex = 17;
             // 
             // txtMasterFiles
             // 
-            this.txtMasterFiles.Location = new System.Drawing.Point(164, 237);
+            this.txtMasterFiles.Location = new System.Drawing.Point(246, 365);
+            this.txtMasterFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMasterFiles.Name = "txtMasterFiles";
-            this.txtMasterFiles.Size = new System.Drawing.Size(100, 20);
+            this.txtMasterFiles.Size = new System.Drawing.Size(148, 26);
             this.txtMasterFiles.TabIndex = 18;
             // 
             // txtInterfaces
             // 
-            this.txtInterfaces.Location = new System.Drawing.Point(164, 265);
+            this.txtInterfaces.Location = new System.Drawing.Point(246, 408);
+            this.txtInterfaces.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInterfaces.Name = "txtInterfaces";
-            this.txtInterfaces.Size = new System.Drawing.Size(100, 20);
+            this.txtInterfaces.Size = new System.Drawing.Size(148, 26);
             this.txtInterfaces.TabIndex = 19;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(435, 288);
+            this.btnCalculate.Location = new System.Drawing.Point(652, 443);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(72, 54);
+            this.btnCalculate.Size = new System.Drawing.Size(108, 83);
             this.btnCalculate.TabIndex = 20;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -198,68 +212,73 @@
             "Simple (3)",
             "Average (4)",
             "Complex (6)"});
-            this.cbInput.Location = new System.Drawing.Point(270, 152);
+            this.cbInput.Location = new System.Drawing.Point(405, 234);
+            this.cbInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbInput.Name = "cbInput";
-            this.cbInput.Size = new System.Drawing.Size(121, 21);
+            this.cbInput.Size = new System.Drawing.Size(180, 28);
             this.cbInput.TabIndex = 21;
             // 
-            // comboBox1
+            // cbOutput
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbOutput.FormattingEnabled = true;
+            this.cbOutput.Items.AddRange(new object[] {
             "Simple (4)",
             "Average (5)",
             "Complex (7)"});
-            this.comboBox1.Location = new System.Drawing.Point(270, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 22;
+            this.cbOutput.Location = new System.Drawing.Point(405, 275);
+            this.cbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbOutput.Name = "cbOutput";
+            this.cbOutput.Size = new System.Drawing.Size(180, 28);
+            this.cbOutput.TabIndex = 22;
             // 
-            // comboBox4
+            // cbInquiry
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbInquiry.FormattingEnabled = true;
+            this.cbInquiry.Items.AddRange(new object[] {
             "Simple (3)",
             "Average (4)",
             "Complex (6)"});
-            this.comboBox4.Location = new System.Drawing.Point(270, 207);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 23;
+            this.cbInquiry.Location = new System.Drawing.Point(405, 318);
+            this.cbInquiry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInquiry.Name = "cbInquiry";
+            this.cbInquiry.Size = new System.Drawing.Size(180, 28);
+            this.cbInquiry.TabIndex = 23;
             // 
-            // comboBox5
+            // cbMasterFiles
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cbMasterFiles.FormattingEnabled = true;
+            this.cbMasterFiles.Items.AddRange(new object[] {
             "Simple (7)",
             "Average (10)",
             "Complex (15)"});
-            this.comboBox5.Location = new System.Drawing.Point(270, 237);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 24;
+            this.cbMasterFiles.Location = new System.Drawing.Point(405, 365);
+            this.cbMasterFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbMasterFiles.Name = "cbMasterFiles";
+            this.cbMasterFiles.Size = new System.Drawing.Size(180, 28);
+            this.cbMasterFiles.TabIndex = 24;
             // 
-            // comboBox6
+            // cbInterfaces
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cbInterfaces.FormattingEnabled = true;
+            this.cbInterfaces.Items.AddRange(new object[] {
             "Simple (5)",
             "Average (7)",
             "Complex (10)"});
-            this.comboBox6.Location = new System.Drawing.Point(270, 265);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 25;
+            this.cbInterfaces.Location = new System.Drawing.Point(405, 408);
+            this.cbInterfaces.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInterfaces.Name = "cbInterfaces";
+            this.cbInterfaces.Size = new System.Drawing.Size(180, 28);
+            this.cbInterfaces.TabIndex = 25;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 773);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(778, 1189);
+            this.Controls.Add(this.cbInterfaces);
+            this.Controls.Add(this.cbMasterFiles);
+            this.Controls.Add(this.cbInquiry);
+            this.Controls.Add(this.cbOutput);
             this.Controls.Add(this.cbInput);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtInterfaces);
@@ -278,7 +297,6 @@
             this.Controls.Add(this.lblLines);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.cbLines);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "Metric Modeller";
             this.ResumeLayout(false);
@@ -306,10 +324,10 @@
         private System.Windows.Forms.TextBox txtInterfaces;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.ComboBox cbInput;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbOutput;
+        private System.Windows.Forms.ComboBox cbInquiry;
+        private System.Windows.Forms.ComboBox cbMasterFiles;
+        private System.Windows.Forms.ComboBox cbInterfaces;
     }
 }
 

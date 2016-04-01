@@ -9,3 +9,12 @@ C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Met
 C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\bin\Debug\MetricModeller.pdb
 C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.exe
 C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.pdb
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.exe.config
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.exe
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.pdb
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.csprojResolveAssemblyReference.cache
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.frmMain.resources
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.Properties.Resources.resources
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.csproj.GenerateResource.Cache
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.exe
+C:\Users\Samuel\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.pdb

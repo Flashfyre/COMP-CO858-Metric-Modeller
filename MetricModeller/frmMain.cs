@@ -16,34 +16,21 @@ namespace MetricModeller {
             InitializeComponent();
         }
 
-        private readonly int[] listOfWeights_input = new int[]{3, 4, 6};
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        private readonly int[][] weightingFactors = new int[][] {
+            new int[] { 3, 4, 6 },
+            new int[] { 4, 5, 7 },
+            new int[] { 3, 4, 6 },
+            new int[] { 7, 10, 15 },
+            new int[] { 5, 7, 10 }
+        };
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            int[] listOfWeights_input = new int[] { 3, 4, 6 };
-
-            int num = listOfWeights_input[comboBox1.SelectedIndex];
+            int weightInput = weightingFactors[0][cbInput.SelectedIndex],
+                weightOutput = weightingFactors[1][cbOutput.SelectedIndex],
+                weightInquiry = weightingFactors[2][cbInquiry.SelectedIndex],
+                weightMasterFiles = weightingFactors[3][cbMasterFiles.SelectedIndex],
+                weightInterfaces = weightingFactors[4][cbInterfaces.SelectedIndex];
         }
     }
 }
