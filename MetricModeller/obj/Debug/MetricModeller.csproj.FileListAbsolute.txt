@@ -1,2 +1,11 @@
 C:\Users\Samuel\OneDrive\College\Semester 5\IT Management and Metrics\MetricModeller\MetricModeller\bin\Debug\MetricModeller.exe.config
 C:\Users\Samuel\Documents\GitHub\MetricModeller\MetricModeller\bin\Debug\MetricModeller.exe.config
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\bin\Debug\MetricModeller.exe.config
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.csprojResolveAssemblyReference.cache
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.frmMain.resources
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.Properties.Resources.resources
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.csproj.GenerateResource.Cache
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\bin\Debug\MetricModeller.exe
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\bin\Debug\MetricModeller.pdb
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.exe
+C:\Users\student.user\Downloads\COMP-CO858-Metric-Modeller-master\COMP-CO858-Metric-Modeller-master\MetricModeller\obj\Debug\MetricModeller.pdb
