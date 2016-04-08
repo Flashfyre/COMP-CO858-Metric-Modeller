@@ -58,6 +58,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(105, 33);
             this.comboBox2.Name = "comboBox2";
@@ -174,6 +175,7 @@
             // 
             // cbInput
             // 
+            this.cbInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInput.FormattingEnabled = true;
             this.cbInput.Items.AddRange(new object[] {
             "Simple (3)",
@@ -186,6 +188,7 @@
             // 
             // cbOutput
             // 
+            this.cbOutput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutput.FormattingEnabled = true;
             this.cbOutput.Items.AddRange(new object[] {
             "Simple (4)",
@@ -198,6 +201,7 @@
             // 
             // cbInquiry
             // 
+            this.cbInquiry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInquiry.FormattingEnabled = true;
             this.cbInquiry.Items.AddRange(new object[] {
             "Simple (3)",
@@ -210,6 +214,7 @@
             // 
             // cbMasterFiles
             // 
+            this.cbMasterFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMasterFiles.FormattingEnabled = true;
             this.cbMasterFiles.Items.AddRange(new object[] {
             "Simple (7)",
@@ -222,6 +227,7 @@
             // 
             // cbInterfaces
             // 
+            this.cbInterfaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInterfaces.FormattingEnabled = true;
             this.cbInterfaces.Items.AddRange(new object[] {
             "Simple (5)",

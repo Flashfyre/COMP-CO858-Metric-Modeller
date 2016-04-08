@@ -78,7 +78,7 @@ namespace MetricModeller {
             dylan = trackBar1.Value;
             
 
-            return 0.65 + (0.01 * (dylan + gururaj + anuj + sam + terry));
+            //return 0.65 + (0.01 * (dylan + gururaj + anuj + sam + terry));
 
             return 0;
         }
@@ -117,5 +117,17 @@ namespace MetricModeller {
         {
 
         }
+
+        private void cbInput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
