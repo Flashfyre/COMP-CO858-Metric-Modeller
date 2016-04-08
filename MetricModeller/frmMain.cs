@@ -29,11 +29,13 @@ namespace MetricModeller {
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            /*
             int weightInput = weightingFactors[0][cbInput.SelectedIndex],
                 weightOutput = weightingFactors[1][cbOutput.SelectedIndex],
                 weightInquiry = weightingFactors[2][cbInquiry.SelectedIndex],
                 weightMasterFiles = weightingFactors[3][cbMasterFiles.SelectedIndex],
                 weightInterfaces = weightingFactors[4][cbInterfaces.SelectedIndex];
+            */
 
             int numOfPeople;
             double totalLines;

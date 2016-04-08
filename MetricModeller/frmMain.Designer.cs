@@ -51,6 +51,16 @@
             this.txtNumOfPeople = new System.Windows.Forms.TextBox();
             this.lblFP = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.cbHighTransactionRates = new System.Windows.Forms.ComboBox();
+            this.cbHeavyHardwareUsage = new System.Windows.Forms.ComboBox();
+            this.cbPerformanceCriteria = new System.Windows.Forms.ComboBox();
+            this.cbDistributedData = new System.Windows.Forms.ComboBox();
+            this.cbDataComm = new System.Windows.Forms.ComboBox();
+            this.lblHighTransactionRates = new System.Windows.Forms.Label();
+            this.lblHeavyHardwareUsage = new System.Windows.Forms.Label();
+            this.lblPerformanceCriteria = new System.Windows.Forms.Label();
+            this.lblDistributedData = new System.Windows.Forms.Label();
+            this.lblDataCommunications = new System.Windows.Forms.Label();
             this.gbTeam.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -276,7 +286,7 @@
             this.gbTeam.Controls.Add(this.txtLinesPerHour);
             this.gbTeam.Controls.Add(this.lblAvgSalary);
             this.gbTeam.Controls.Add(this.label6);
-            this.gbTeam.Location = new System.Drawing.Point(26, 281);
+            this.gbTeam.Location = new System.Drawing.Point(40, 561);
             this.gbTeam.Name = "gbTeam";
             this.gbTeam.Size = new System.Drawing.Size(392, 141);
             this.gbTeam.TabIndex = 30;
@@ -285,10 +295,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbHighTransactionRates);
             this.groupBox1.Controls.Add(this.txtNumOfPeople);
+            this.groupBox1.Controls.Add(this.cbHeavyHardwareUsage);
+            this.groupBox1.Controls.Add(this.cbDataComm);
+            this.groupBox1.Controls.Add(this.cbPerformanceCriteria);
+            this.groupBox1.Controls.Add(this.lblDataCommunications);
+            this.groupBox1.Controls.Add(this.cbDistributedData);
+            this.groupBox1.Controls.Add(this.lblDistributedData);
+            this.groupBox1.Controls.Add(this.lblPerformanceCriteria);
+            this.groupBox1.Controls.Add(this.lblHighTransactionRates);
+            this.groupBox1.Controls.Add(this.lblHeavyHardwareUsage);
             this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 253);
+            this.groupBox1.Size = new System.Drawing.Size(789, 454);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "The Project";
@@ -310,16 +330,126 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(227, 272);
+            this.trackBar1.Location = new System.Drawing.Point(612, 121);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(104, 45);
             this.trackBar1.TabIndex = 33;
+            // 
+            // cbHighTransactionRates
+            // 
+            this.cbHighTransactionRates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHighTransactionRates.FormattingEnabled = true;
+            this.cbHighTransactionRates.Items.AddRange(new object[] {
+            "Simple (5)",
+            "Average (7)",
+            "Complex (10)"});
+            this.cbHighTransactionRates.Location = new System.Drawing.Point(539, 273);
+            this.cbHighTransactionRates.Name = "cbHighTransactionRates";
+            this.cbHighTransactionRates.Size = new System.Drawing.Size(121, 21);
+            this.cbHighTransactionRates.TabIndex = 43;
+            // 
+            // cbHeavyHardwareUsage
+            // 
+            this.cbHeavyHardwareUsage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHeavyHardwareUsage.FormattingEnabled = true;
+            this.cbHeavyHardwareUsage.Items.AddRange(new object[] {
+            "Simple (7)",
+            "Average (10)",
+            "Complex (15)"});
+            this.cbHeavyHardwareUsage.Location = new System.Drawing.Point(412, 273);
+            this.cbHeavyHardwareUsage.Name = "cbHeavyHardwareUsage";
+            this.cbHeavyHardwareUsage.Size = new System.Drawing.Size(121, 21);
+            this.cbHeavyHardwareUsage.TabIndex = 42;
+            // 
+            // cbPerformanceCriteria
+            // 
+            this.cbPerformanceCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPerformanceCriteria.FormattingEnabled = true;
+            this.cbPerformanceCriteria.Items.AddRange(new object[] {
+            "Simple (3)",
+            "Average (4)",
+            "Complex (6)"});
+            this.cbPerformanceCriteria.Location = new System.Drawing.Point(285, 273);
+            this.cbPerformanceCriteria.Name = "cbPerformanceCriteria";
+            this.cbPerformanceCriteria.Size = new System.Drawing.Size(121, 21);
+            this.cbPerformanceCriteria.TabIndex = 41;
+            // 
+            // cbDistributedData
+            // 
+            this.cbDistributedData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDistributedData.FormattingEnabled = true;
+            this.cbDistributedData.Items.AddRange(new object[] {
+            "Simple (4)",
+            "Average (5)",
+            "Complex (7)"});
+            this.cbDistributedData.Location = new System.Drawing.Point(156, 273);
+            this.cbDistributedData.Name = "cbDistributedData";
+            this.cbDistributedData.Size = new System.Drawing.Size(121, 21);
+            this.cbDistributedData.TabIndex = 40;
+            // 
+            // cbDataComm
+            // 
+            this.cbDataComm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDataComm.FormattingEnabled = true;
+            this.cbDataComm.Items.AddRange(new object[] {
+            "Simple (3)",
+            "Average (4)",
+            "Complex (6)"});
+            this.cbDataComm.Location = new System.Drawing.Point(27, 273);
+            this.cbDataComm.Name = "cbDataComm";
+            this.cbDataComm.Size = new System.Drawing.Size(121, 21);
+            this.cbDataComm.TabIndex = 39;
+            // 
+            // lblHighTransactionRates
+            // 
+            this.lblHighTransactionRates.AutoSize = true;
+            this.lblHighTransactionRates.Location = new System.Drawing.Point(536, 257);
+            this.lblHighTransactionRates.Name = "lblHighTransactionRates";
+            this.lblHighTransactionRates.Size = new System.Drawing.Size(119, 13);
+            this.lblHighTransactionRates.TabIndex = 38;
+            this.lblHighTransactionRates.Text = "High Transaction Rates";
+            // 
+            // lblHeavyHardwareUsage
+            // 
+            this.lblHeavyHardwareUsage.AutoSize = true;
+            this.lblHeavyHardwareUsage.Location = new System.Drawing.Point(409, 257);
+            this.lblHeavyHardwareUsage.Name = "lblHeavyHardwareUsage";
+            this.lblHeavyHardwareUsage.Size = new System.Drawing.Size(121, 13);
+            this.lblHeavyHardwareUsage.TabIndex = 37;
+            this.lblHeavyHardwareUsage.Text = "Heavy Hardware Usage";
+            // 
+            // lblPerformanceCriteria
+            // 
+            this.lblPerformanceCriteria.AutoSize = true;
+            this.lblPerformanceCriteria.Location = new System.Drawing.Point(282, 257);
+            this.lblPerformanceCriteria.Name = "lblPerformanceCriteria";
+            this.lblPerformanceCriteria.Size = new System.Drawing.Size(102, 13);
+            this.lblPerformanceCriteria.TabIndex = 36;
+            this.lblPerformanceCriteria.Text = "Performance Criteria";
+            // 
+            // lblDistributedData
+            // 
+            this.lblDistributedData.AutoSize = true;
+            this.lblDistributedData.Location = new System.Drawing.Point(153, 257);
+            this.lblDistributedData.Name = "lblDistributedData";
+            this.lblDistributedData.Size = new System.Drawing.Size(83, 13);
+            this.lblDistributedData.TabIndex = 35;
+            this.lblDistributedData.Text = "Distributed Data";
+            // 
+            // lblDataCommunications
+            // 
+            this.lblDataCommunications.AutoSize = true;
+            this.lblDataCommunications.Location = new System.Drawing.Point(29, 257);
+            this.lblDataCommunications.Name = "lblDataCommunications";
+            this.lblDataCommunications.Size = new System.Drawing.Size(110, 13);
+            this.lblDataCommunications.TabIndex = 34;
+            this.lblDataCommunications.Text = "Data Communications";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 557);
+            this.ClientSize = new System.Drawing.Size(842, 792);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.lblFP);
             this.Controls.Add(this.gbTeam);
@@ -387,6 +517,16 @@
         private System.Windows.Forms.TextBox txtNumOfPeople;
         private System.Windows.Forms.Label lblFP;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.ComboBox cbHighTransactionRates;
+        private System.Windows.Forms.ComboBox cbHeavyHardwareUsage;
+        private System.Windows.Forms.ComboBox cbDataComm;
+        private System.Windows.Forms.ComboBox cbPerformanceCriteria;
+        private System.Windows.Forms.Label lblDataCommunications;
+        private System.Windows.Forms.ComboBox cbDistributedData;
+        private System.Windows.Forms.Label lblDistributedData;
+        private System.Windows.Forms.Label lblPerformanceCriteria;
+        private System.Windows.Forms.Label lblHighTransactionRates;
+        private System.Windows.Forms.Label lblHeavyHardwareUsage;
     }
 }
 
