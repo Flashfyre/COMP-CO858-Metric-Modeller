@@ -25,6 +25,7 @@ namespace MetricModeller {
         public frmMain(Dictionary<string, Tuple<decimal, int>> langData) {
             this.langData = langData;
             InitializeComponent();
+            populateLanguages();
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -113,6 +114,15 @@ namespace MetricModeller {
         private double calculateCost(double manMonths, double salary)
         {
             return manMonths * (salary / 12);
+        }
+
+        private void populateLanguages() {
+            Dictionary<string, Tuple<decimal, int>>.Enumerator langEnum = langData.GetEnumerator();
+           
+            while (langEnum.MoveNext()) {
+                KeyValuePair<string, Tuple<decimal, int>> curLang = langEnum.Current;
+                cbLang.Items.Add(curLang.Key);
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
