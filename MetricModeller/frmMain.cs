@@ -50,30 +50,48 @@ namespace MetricModeller {
             functionPoints = calculateFunctionPoints();
 
             lblFP.Text = functionPoints.ToString();
-
-            /*
+            
             totalLines = calculateTotalLines(functionPoints);
 
             manMonths = calculateManMonths(totalLines, linesPerHour, numOfPeople);
 
             cost = calculateCost(manMonths, salary);
-            */
+            
         }
 
         private double calculateTotalLines(double functionPoints)
         {
+            //FP * language average
             return 0;
         }
 
-        private double calculateFunctionPoints()
+        private int calculateFunctionPoints()
         {
-            double input, wInput, output, wOutput, inquiry, wInquiry, masterFiles, wMasterFiles, interfaces, wInterfaces;
+            return (int) calculateTCF() * calculateUFP();
+        }
 
-            double.TryParse(txtInput.Text,          out input);
-            double.TryParse(txtOutput.Text,         out output);
-            double.TryParse(txtInquiry.Text,        out inquiry);
-            double.TryParse(txtMasterFiles.Text,    out masterFiles);
-            double.TryParse(txtInterfaces.Text,     out interfaces);
+        private double calculateTCF()
+        {
+            //0.65 + (.01 * Sum of 14 technical complexity factors)
+
+            int dylan, gururaj, sam, anuj, terry;
+            dylan = trackBar1.Value;
+            
+
+            return 0.65 + (0.01 * (dylan + gururaj + anuj + sam + terry));
+
+            return 0;
+        }
+
+        private int calculateUFP()
+        {
+            int input, wInput, output, wOutput, inquiry, wInquiry, masterFiles, wMasterFiles, interfaces, wInterfaces;
+
+            int.TryParse(txtInput.Text,          out input);
+            int.TryParse(txtOutput.Text,         out output);
+            int.TryParse(txtInquiry.Text,        out inquiry);
+            int.TryParse(txtMasterFiles.Text,    out masterFiles);
+            int.TryParse(txtInterfaces.Text,     out interfaces);
 
             wInput = weightingFactors[0][cbInput.SelectedIndex];
             wInput = weightingFactors[0][cbInput.SelectedIndex];

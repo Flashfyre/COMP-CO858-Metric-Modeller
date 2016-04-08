@@ -27,3 +27,12 @@ C:\Users\student.user\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller
 C:\Users\student.user\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.frmMain.resources
 C:\Users\student.user\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.Properties.Resources.resources
 C:\Users\student.user\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.csproj.GenerateResource.Cache
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.exe.config
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.exe
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.pdb
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.exe
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\bin\Debug\MetricModeller.pdb
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.csprojResolveAssemblyReference.cache
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.frmMain.resources
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.Properties.Resources.resources
+C:\Users\YsoHI\Documents\GitHub\COMP-CO858-Metric-Modeller\MetricModeller\obj\Debug\MetricModeller.csproj.GenerateResource.Cache

@@ -50,8 +50,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNumOfPeople = new System.Windows.Forms.TextBox();
             this.lblFP = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.gbTeam.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -300,11 +302,19 @@
             this.lblFP.Size = new System.Drawing.Size(0, 13);
             this.lblFP.TabIndex = 32;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(227, 272);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 33;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 557);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.lblFP);
             this.Controls.Add(this.gbTeam);
             this.Controls.Add(this.cbInterfaces);
@@ -327,7 +337,7 @@
             this.Controls.Add(this.lblLanguage);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "Metric Modeller";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -335,6 +345,7 @@
             this.gbTeam.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +380,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNumOfPeople;
         private System.Windows.Forms.Label lblFP;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
