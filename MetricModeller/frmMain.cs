@@ -30,14 +30,6 @@ namespace MetricModeller {
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            /*
-            int weightInput = weightingFactors[0][cbInput.SelectedIndex],
-                weightOutput = weightingFactors[1][cbOutput.SelectedIndex],
-                weightInquiry = weightingFactors[2][cbInquiry.SelectedIndex],
-                weightMasterFiles = weightingFactors[3][cbMasterFiles.SelectedIndex],
-                weightInterfaces = weightingFactors[4][cbInterfaces.SelectedIndex];
-            */
-
             int numOfPeople;
             int linesPerHour;
             int totalLines;
@@ -48,7 +40,7 @@ namespace MetricModeller {
             double languageAvg;
 
             double.TryParse(txtAvgSalary.Text,      out salary);
-            int.TryParse(txtLinesPerHour.Text,   out linesPerHour);
+            int.TryParse(txtLinesPerHour.Text,      out linesPerHour);
             int.TryParse(txtNumOfPeople.Text,       out numOfPeople);
 
             languageAvg = 16;   //TOFIX: REPLACE 16 WITH ACTUAL LANGUAGE AVERAGE
@@ -69,7 +61,6 @@ namespace MetricModeller {
 
         private int calculateTotalLines(double functionPoints, double languageAvg)
         {
-            //return FP * language avg
             return (int) (functionPoints * languageAvg);
         }
 
