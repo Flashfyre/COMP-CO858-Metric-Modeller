@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace MetricModeller {
 
@@ -38,54 +39,76 @@ namespace MetricModeller {
             */
 
             int numOfPeople;
-            double totalLines;
-            double linesPerHour;
+            int linesPerHour;
+            int totalLines;
+            double functionPoints;
             double manMonths;
             double cost;
             double salary;
-            double functionPoints;
+            double languageAvg;
 
             double.TryParse(txtAvgSalary.Text,      out salary);
-            double.TryParse(txtLinesPerHour.Text,   out linesPerHour);
+            int.TryParse(txtLinesPerHour.Text,   out linesPerHour);
             int.TryParse(txtNumOfPeople.Text,       out numOfPeople);
+
+            languageAvg = 16;   //TOFIX: REPLACE 16 WITH ACTUAL LANGUAGE AVERAGE
 
             functionPoints = calculateFunctionPoints();
 
-            lblFP.Text = functionPoints.ToString();
-            
-            totalLines = calculateTotalLines(functionPoints);
+            totalLines = calculateTotalLines(functionPoints, languageAvg);
 
             manMonths = calculateManMonths(totalLines, linesPerHour, numOfPeople);
 
             cost = calculateCost(manMonths, salary);
-            
+
+            Debug.WriteLine("Function Points: " + functionPoints);
+            Debug.WriteLine("Total Lines: " + totalLines);
+            Debug.WriteLine("Man Months: " + manMonths);
+            Debug.WriteLine("Cost: $" + cost);
         }
 
-        private double calculateTotalLines(double functionPoints)
+        private int calculateTotalLines(double functionPoints, double languageAvg)
         {
-            //FP * language average
-            return 0;
+            //return FP * language avg
+            return (int) (functionPoints * languageAvg);
         }
 
-        private int calculateFunctionPoints()
+        private double calculateFunctionPoints()
         {
-            return (int) calculateTCF() * calculateUFP();
+            return (calculateUFP() * calculateTCF());
         }
 
         private double calculateTCF()
         {
-            //0.65 + (.01 * Sum of 14 technical complexity factors)
+            int[] listOfFactors = new int[]
+            {
+                cbDataComm.SelectedIndex,
+                cbDistributedData.SelectedIndex,
+                cbPerformanceCriteria.SelectedIndex,
+                cbHeavyHardwareUsage.SelectedIndex,
+                cbHighTransactionRates.SelectedIndex,
+                cbOnlineDataEntry.SelectedIndex,
+                cbOnlineUpdating.SelectedIndex,
+                cbComplexComputations.SelectedIndex,
+                cbEaseOfInstallation.SelectedIndex,
+                cbEaseOfOperation.SelectedIndex,
+                cbPortability.SelectedIndex,
+                cbMaintainability.SelectedIndex,
+                cbEndUserEfficiency.SelectedIndex,
+                cbReusability.SelectedIndex
+            };
 
-            int dylan, gururaj, sam, anuj, terry;
-            dylan = trackBar1.Value;
-            
+            double sum = 0;         
 
-            //return 0.65 + (0.01 * (dylan + gururaj + anuj + sam + terry));
+            foreach(int i in listOfFactors)
+            {
+                sum += i;
+            }
 
-            return 0;
+            return 0.65 + (0.01 * sum);
         }
 
-        private int calculateUFP()
+        private double calculateUFP()
         {
             int input, wInput, output, wOutput, inquiry, wInquiry, masterFiles, wMasterFiles, interfaces, wInterfaces;
 
@@ -102,10 +125,10 @@ namespace MetricModeller {
             wMasterFiles = weightingFactors[3][cbMasterFiles.SelectedIndex];
             wInterfaces = weightingFactors[4][cbInterfaces.SelectedIndex];
             
-            return (input * wInput) + (output * wOutput) + (inquiry * wInquiry) + (interfaces * wInterfaces);
+            return (input * wInput) + (output * wOutput) + (inquiry * wInquiry) + (masterFiles * wMasterFiles) + (interfaces * wInterfaces);
         }
 
-        private double calculateManMonths(double totalLines, double linesPerHour, int numOfPeople)
+        private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople)
         {
             return totalLines / (linesPerHour * numOfPeople);
         }

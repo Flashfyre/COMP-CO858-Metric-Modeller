@@ -48,19 +48,37 @@
             this.label6 = new System.Windows.Forms.Label();
             this.gbTeam = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtNumOfPeople = new System.Windows.Forms.TextBox();
-            this.lblFP = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.cbHighTransactionRates = new System.Windows.Forms.ComboBox();
+            this.txtNumOfPeople = new System.Windows.Forms.TextBox();
             this.cbHeavyHardwareUsage = new System.Windows.Forms.ComboBox();
-            this.cbPerformanceCriteria = new System.Windows.Forms.ComboBox();
-            this.cbDistributedData = new System.Windows.Forms.ComboBox();
             this.cbDataComm = new System.Windows.Forms.ComboBox();
+            this.cbPerformanceCriteria = new System.Windows.Forms.ComboBox();
+            this.lblDataCommunications = new System.Windows.Forms.Label();
+            this.cbDistributedData = new System.Windows.Forms.ComboBox();
+            this.lblDistributedData = new System.Windows.Forms.Label();
+            this.lblPerformanceCriteria = new System.Windows.Forms.Label();
             this.lblHighTransactionRates = new System.Windows.Forms.Label();
             this.lblHeavyHardwareUsage = new System.Windows.Forms.Label();
-            this.lblPerformanceCriteria = new System.Windows.Forms.Label();
-            this.lblDistributedData = new System.Windows.Forms.Label();
-            this.lblDataCommunications = new System.Windows.Forms.Label();
+            this.lblFP = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.cbEaseOfOperation = new System.Windows.Forms.ComboBox();
+            this.cbEaseOfInstallation = new System.Windows.Forms.ComboBox();
+            this.cbOnlineDataEntry = new System.Windows.Forms.ComboBox();
+            this.cbComplexComputations = new System.Windows.Forms.ComboBox();
+            this.lblOnlineDataEntry = new System.Windows.Forms.Label();
+            this.cbOnlineUpdating = new System.Windows.Forms.ComboBox();
+            this.lblOnlineUpdating = new System.Windows.Forms.Label();
+            this.lblComplexComputations = new System.Windows.Forms.Label();
+            this.lblEaseOfOperation = new System.Windows.Forms.Label();
+            this.lblEaseOfInstallation = new System.Windows.Forms.Label();
+            this.cbReusability = new System.Windows.Forms.ComboBox();
+            this.cbPortability = new System.Windows.Forms.ComboBox();
+            this.cbEndUserEfficiency = new System.Windows.Forms.ComboBox();
+            this.lblPortability = new System.Windows.Forms.Label();
+            this.cbMaintainability = new System.Windows.Forms.ComboBox();
+            this.lblMaintainability = new System.Windows.Forms.Label();
+            this.lblEndUserEfficiency = new System.Windows.Forms.Label();
+            this.lblReusability = new System.Windows.Forms.Label();
             this.gbTeam.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -295,6 +313,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbReusability);
+            this.groupBox1.Controls.Add(this.cbPortability);
+            this.groupBox1.Controls.Add(this.cbEndUserEfficiency);
+            this.groupBox1.Controls.Add(this.lblPortability);
+            this.groupBox1.Controls.Add(this.cbMaintainability);
+            this.groupBox1.Controls.Add(this.lblMaintainability);
+            this.groupBox1.Controls.Add(this.lblEndUserEfficiency);
+            this.groupBox1.Controls.Add(this.lblReusability);
+            this.groupBox1.Controls.Add(this.cbEaseOfOperation);
+            this.groupBox1.Controls.Add(this.cbEaseOfInstallation);
+            this.groupBox1.Controls.Add(this.cbOnlineDataEntry);
+            this.groupBox1.Controls.Add(this.cbComplexComputations);
+            this.groupBox1.Controls.Add(this.lblOnlineDataEntry);
+            this.groupBox1.Controls.Add(this.cbOnlineUpdating);
+            this.groupBox1.Controls.Add(this.lblOnlineUpdating);
+            this.groupBox1.Controls.Add(this.lblComplexComputations);
+            this.groupBox1.Controls.Add(this.lblEaseOfOperation);
+            this.groupBox1.Controls.Add(this.lblEaseOfInstallation);
             this.groupBox1.Controls.Add(this.cbHighTransactionRates);
             this.groupBox1.Controls.Add(this.txtNumOfPeople);
             this.groupBox1.Controls.Add(this.cbHeavyHardwareUsage);
@@ -313,6 +349,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "The Project";
             // 
+            // cbHighTransactionRates
+            // 
+            this.cbHighTransactionRates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHighTransactionRates.FormattingEnabled = true;
+            this.cbHighTransactionRates.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbHighTransactionRates.Location = new System.Drawing.Point(539, 273);
+            this.cbHighTransactionRates.Name = "cbHighTransactionRates";
+            this.cbHighTransactionRates.Size = new System.Drawing.Size(121, 21);
+            this.cbHighTransactionRates.TabIndex = 43;
+            // 
             // txtNumOfPeople
             // 
             this.txtNumOfPeople.Location = new System.Drawing.Point(79, 48);
@@ -320,85 +372,96 @@
             this.txtNumOfPeople.Size = new System.Drawing.Size(121, 20);
             this.txtNumOfPeople.TabIndex = 32;
             // 
-            // lblFP
-            // 
-            this.lblFP.AutoSize = true;
-            this.lblFP.Location = new System.Drawing.Point(63, 469);
-            this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(0, 13);
-            this.lblFP.TabIndex = 32;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(612, 121);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 33;
-            // 
-            // cbHighTransactionRates
-            // 
-            this.cbHighTransactionRates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHighTransactionRates.FormattingEnabled = true;
-            this.cbHighTransactionRates.Items.AddRange(new object[] {
-            "Simple (5)",
-            "Average (7)",
-            "Complex (10)"});
-            this.cbHighTransactionRates.Location = new System.Drawing.Point(539, 273);
-            this.cbHighTransactionRates.Name = "cbHighTransactionRates";
-            this.cbHighTransactionRates.Size = new System.Drawing.Size(121, 21);
-            this.cbHighTransactionRates.TabIndex = 43;
-            // 
             // cbHeavyHardwareUsage
             // 
             this.cbHeavyHardwareUsage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHeavyHardwareUsage.FormattingEnabled = true;
             this.cbHeavyHardwareUsage.Items.AddRange(new object[] {
-            "Simple (7)",
-            "Average (10)",
-            "Complex (15)"});
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.cbHeavyHardwareUsage.Location = new System.Drawing.Point(412, 273);
             this.cbHeavyHardwareUsage.Name = "cbHeavyHardwareUsage";
             this.cbHeavyHardwareUsage.Size = new System.Drawing.Size(121, 21);
             this.cbHeavyHardwareUsage.TabIndex = 42;
-            // 
-            // cbPerformanceCriteria
-            // 
-            this.cbPerformanceCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPerformanceCriteria.FormattingEnabled = true;
-            this.cbPerformanceCriteria.Items.AddRange(new object[] {
-            "Simple (3)",
-            "Average (4)",
-            "Complex (6)"});
-            this.cbPerformanceCriteria.Location = new System.Drawing.Point(285, 273);
-            this.cbPerformanceCriteria.Name = "cbPerformanceCriteria";
-            this.cbPerformanceCriteria.Size = new System.Drawing.Size(121, 21);
-            this.cbPerformanceCriteria.TabIndex = 41;
-            // 
-            // cbDistributedData
-            // 
-            this.cbDistributedData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDistributedData.FormattingEnabled = true;
-            this.cbDistributedData.Items.AddRange(new object[] {
-            "Simple (4)",
-            "Average (5)",
-            "Complex (7)"});
-            this.cbDistributedData.Location = new System.Drawing.Point(156, 273);
-            this.cbDistributedData.Name = "cbDistributedData";
-            this.cbDistributedData.Size = new System.Drawing.Size(121, 21);
-            this.cbDistributedData.TabIndex = 40;
             // 
             // cbDataComm
             // 
             this.cbDataComm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDataComm.FormattingEnabled = true;
             this.cbDataComm.Items.AddRange(new object[] {
-            "Simple (3)",
-            "Average (4)",
-            "Complex (6)"});
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.cbDataComm.Location = new System.Drawing.Point(27, 273);
             this.cbDataComm.Name = "cbDataComm";
             this.cbDataComm.Size = new System.Drawing.Size(121, 21);
             this.cbDataComm.TabIndex = 39;
+            // 
+            // cbPerformanceCriteria
+            // 
+            this.cbPerformanceCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPerformanceCriteria.FormattingEnabled = true;
+            this.cbPerformanceCriteria.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbPerformanceCriteria.Location = new System.Drawing.Point(285, 273);
+            this.cbPerformanceCriteria.Name = "cbPerformanceCriteria";
+            this.cbPerformanceCriteria.Size = new System.Drawing.Size(121, 21);
+            this.cbPerformanceCriteria.TabIndex = 41;
+            // 
+            // lblDataCommunications
+            // 
+            this.lblDataCommunications.AutoSize = true;
+            this.lblDataCommunications.Location = new System.Drawing.Point(29, 257);
+            this.lblDataCommunications.Name = "lblDataCommunications";
+            this.lblDataCommunications.Size = new System.Drawing.Size(110, 13);
+            this.lblDataCommunications.TabIndex = 34;
+            this.lblDataCommunications.Text = "Data Communications";
+            // 
+            // cbDistributedData
+            // 
+            this.cbDistributedData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDistributedData.FormattingEnabled = true;
+            this.cbDistributedData.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbDistributedData.Location = new System.Drawing.Point(156, 273);
+            this.cbDistributedData.Name = "cbDistributedData";
+            this.cbDistributedData.Size = new System.Drawing.Size(121, 21);
+            this.cbDistributedData.TabIndex = 40;
+            // 
+            // lblDistributedData
+            // 
+            this.lblDistributedData.AutoSize = true;
+            this.lblDistributedData.Location = new System.Drawing.Point(153, 257);
+            this.lblDistributedData.Name = "lblDistributedData";
+            this.lblDistributedData.Size = new System.Drawing.Size(83, 13);
+            this.lblDistributedData.TabIndex = 35;
+            this.lblDistributedData.Text = "Distributed Data";
+            // 
+            // lblPerformanceCriteria
+            // 
+            this.lblPerformanceCriteria.AutoSize = true;
+            this.lblPerformanceCriteria.Location = new System.Drawing.Point(282, 257);
+            this.lblPerformanceCriteria.Name = "lblPerformanceCriteria";
+            this.lblPerformanceCriteria.Size = new System.Drawing.Size(102, 13);
+            this.lblPerformanceCriteria.TabIndex = 36;
+            this.lblPerformanceCriteria.Text = "Performance Criteria";
             // 
             // lblHighTransactionRates
             // 
@@ -418,32 +481,245 @@
             this.lblHeavyHardwareUsage.TabIndex = 37;
             this.lblHeavyHardwareUsage.Text = "Heavy Hardware Usage";
             // 
-            // lblPerformanceCriteria
+            // lblFP
             // 
-            this.lblPerformanceCriteria.AutoSize = true;
-            this.lblPerformanceCriteria.Location = new System.Drawing.Point(282, 257);
-            this.lblPerformanceCriteria.Name = "lblPerformanceCriteria";
-            this.lblPerformanceCriteria.Size = new System.Drawing.Size(102, 13);
-            this.lblPerformanceCriteria.TabIndex = 36;
-            this.lblPerformanceCriteria.Text = "Performance Criteria";
+            this.lblFP.AutoSize = true;
+            this.lblFP.Location = new System.Drawing.Point(63, 469);
+            this.lblFP.Name = "lblFP";
+            this.lblFP.Size = new System.Drawing.Size(0, 13);
+            this.lblFP.TabIndex = 32;
             // 
-            // lblDistributedData
+            // trackBar1
             // 
-            this.lblDistributedData.AutoSize = true;
-            this.lblDistributedData.Location = new System.Drawing.Point(153, 257);
-            this.lblDistributedData.Name = "lblDistributedData";
-            this.lblDistributedData.Size = new System.Drawing.Size(83, 13);
-            this.lblDistributedData.TabIndex = 35;
-            this.lblDistributedData.Text = "Distributed Data";
+            this.trackBar1.Location = new System.Drawing.Point(612, 121);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 33;
             // 
-            // lblDataCommunications
+            // cbEaseOfOperation
             // 
-            this.lblDataCommunications.AutoSize = true;
-            this.lblDataCommunications.Location = new System.Drawing.Point(29, 257);
-            this.lblDataCommunications.Name = "lblDataCommunications";
-            this.lblDataCommunications.Size = new System.Drawing.Size(110, 13);
-            this.lblDataCommunications.TabIndex = 34;
-            this.lblDataCommunications.Text = "Data Communications";
+            this.cbEaseOfOperation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEaseOfOperation.FormattingEnabled = true;
+            this.cbEaseOfOperation.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbEaseOfOperation.Location = new System.Drawing.Point(539, 322);
+            this.cbEaseOfOperation.Name = "cbEaseOfOperation";
+            this.cbEaseOfOperation.Size = new System.Drawing.Size(121, 21);
+            this.cbEaseOfOperation.TabIndex = 53;
+            // 
+            // cbEaseOfInstallation
+            // 
+            this.cbEaseOfInstallation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEaseOfInstallation.FormattingEnabled = true;
+            this.cbEaseOfInstallation.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbEaseOfInstallation.Location = new System.Drawing.Point(412, 322);
+            this.cbEaseOfInstallation.Name = "cbEaseOfInstallation";
+            this.cbEaseOfInstallation.Size = new System.Drawing.Size(121, 21);
+            this.cbEaseOfInstallation.TabIndex = 52;
+            // 
+            // cbOnlineDataEntry
+            // 
+            this.cbOnlineDataEntry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOnlineDataEntry.FormattingEnabled = true;
+            this.cbOnlineDataEntry.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbOnlineDataEntry.Location = new System.Drawing.Point(27, 322);
+            this.cbOnlineDataEntry.Name = "cbOnlineDataEntry";
+            this.cbOnlineDataEntry.Size = new System.Drawing.Size(121, 21);
+            this.cbOnlineDataEntry.TabIndex = 49;
+            // 
+            // cbComplexComputations
+            // 
+            this.cbComplexComputations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbComplexComputations.FormattingEnabled = true;
+            this.cbComplexComputations.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbComplexComputations.Location = new System.Drawing.Point(285, 322);
+            this.cbComplexComputations.Name = "cbComplexComputations";
+            this.cbComplexComputations.Size = new System.Drawing.Size(121, 21);
+            this.cbComplexComputations.TabIndex = 51;
+            // 
+            // lblOnlineDataEntry
+            // 
+            this.lblOnlineDataEntry.AutoSize = true;
+            this.lblOnlineDataEntry.Location = new System.Drawing.Point(29, 306);
+            this.lblOnlineDataEntry.Name = "lblOnlineDataEntry";
+            this.lblOnlineDataEntry.Size = new System.Drawing.Size(90, 13);
+            this.lblOnlineDataEntry.TabIndex = 44;
+            this.lblOnlineDataEntry.Text = "Online Data Entry";
+            // 
+            // cbOnlineUpdating
+            // 
+            this.cbOnlineUpdating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOnlineUpdating.FormattingEnabled = true;
+            this.cbOnlineUpdating.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbOnlineUpdating.Location = new System.Drawing.Point(156, 322);
+            this.cbOnlineUpdating.Name = "cbOnlineUpdating";
+            this.cbOnlineUpdating.Size = new System.Drawing.Size(121, 21);
+            this.cbOnlineUpdating.TabIndex = 50;
+            // 
+            // lblOnlineUpdating
+            // 
+            this.lblOnlineUpdating.AutoSize = true;
+            this.lblOnlineUpdating.Location = new System.Drawing.Point(153, 306);
+            this.lblOnlineUpdating.Name = "lblOnlineUpdating";
+            this.lblOnlineUpdating.Size = new System.Drawing.Size(83, 13);
+            this.lblOnlineUpdating.TabIndex = 45;
+            this.lblOnlineUpdating.Text = "Online Updating";
+            // 
+            // lblComplexComputations
+            // 
+            this.lblComplexComputations.AutoSize = true;
+            this.lblComplexComputations.Location = new System.Drawing.Point(282, 306);
+            this.lblComplexComputations.Name = "lblComplexComputations";
+            this.lblComplexComputations.Size = new System.Drawing.Size(114, 13);
+            this.lblComplexComputations.TabIndex = 46;
+            this.lblComplexComputations.Text = "Complex Computations";
+            // 
+            // lblEaseOfOperation
+            // 
+            this.lblEaseOfOperation.AutoSize = true;
+            this.lblEaseOfOperation.Location = new System.Drawing.Point(536, 306);
+            this.lblEaseOfOperation.Name = "lblEaseOfOperation";
+            this.lblEaseOfOperation.Size = new System.Drawing.Size(92, 13);
+            this.lblEaseOfOperation.TabIndex = 48;
+            this.lblEaseOfOperation.Text = "Ease of Operation";
+            // 
+            // lblEaseOfInstallation
+            // 
+            this.lblEaseOfInstallation.AutoSize = true;
+            this.lblEaseOfInstallation.Location = new System.Drawing.Point(409, 306);
+            this.lblEaseOfInstallation.Name = "lblEaseOfInstallation";
+            this.lblEaseOfInstallation.Size = new System.Drawing.Size(96, 13);
+            this.lblEaseOfInstallation.TabIndex = 47;
+            this.lblEaseOfInstallation.Text = "Ease of Installation";
+            // 
+            // cbReusability
+            // 
+            this.cbReusability.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbReusability.FormattingEnabled = true;
+            this.cbReusability.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbReusability.Location = new System.Drawing.Point(412, 372);
+            this.cbReusability.Name = "cbReusability";
+            this.cbReusability.Size = new System.Drawing.Size(121, 21);
+            this.cbReusability.TabIndex = 62;
+            // 
+            // cbPortability
+            // 
+            this.cbPortability.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPortability.FormattingEnabled = true;
+            this.cbPortability.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbPortability.Location = new System.Drawing.Point(27, 372);
+            this.cbPortability.Name = "cbPortability";
+            this.cbPortability.Size = new System.Drawing.Size(121, 21);
+            this.cbPortability.TabIndex = 59;
+            // 
+            // cbEndUserEfficiency
+            // 
+            this.cbEndUserEfficiency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEndUserEfficiency.FormattingEnabled = true;
+            this.cbEndUserEfficiency.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbEndUserEfficiency.Location = new System.Drawing.Point(285, 372);
+            this.cbEndUserEfficiency.Name = "cbEndUserEfficiency";
+            this.cbEndUserEfficiency.Size = new System.Drawing.Size(121, 21);
+            this.cbEndUserEfficiency.TabIndex = 61;
+            // 
+            // lblPortability
+            // 
+            this.lblPortability.AutoSize = true;
+            this.lblPortability.Location = new System.Drawing.Point(29, 356);
+            this.lblPortability.Name = "lblPortability";
+            this.lblPortability.Size = new System.Drawing.Size(52, 13);
+            this.lblPortability.TabIndex = 54;
+            this.lblPortability.Text = "Portability";
+            // 
+            // cbMaintainability
+            // 
+            this.cbMaintainability.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMaintainability.FormattingEnabled = true;
+            this.cbMaintainability.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbMaintainability.Location = new System.Drawing.Point(156, 372);
+            this.cbMaintainability.Name = "cbMaintainability";
+            this.cbMaintainability.Size = new System.Drawing.Size(121, 21);
+            this.cbMaintainability.TabIndex = 60;
+            // 
+            // lblMaintainability
+            // 
+            this.lblMaintainability.AutoSize = true;
+            this.lblMaintainability.Location = new System.Drawing.Point(153, 356);
+            this.lblMaintainability.Name = "lblMaintainability";
+            this.lblMaintainability.Size = new System.Drawing.Size(73, 13);
+            this.lblMaintainability.TabIndex = 55;
+            this.lblMaintainability.Text = "Maintainability";
+            // 
+            // lblEndUserEfficiency
+            // 
+            this.lblEndUserEfficiency.AutoSize = true;
+            this.lblEndUserEfficiency.Location = new System.Drawing.Point(282, 356);
+            this.lblEndUserEfficiency.Name = "lblEndUserEfficiency";
+            this.lblEndUserEfficiency.Size = new System.Drawing.Size(98, 13);
+            this.lblEndUserEfficiency.TabIndex = 56;
+            this.lblEndUserEfficiency.Text = "End-user Efficiency";
+            // 
+            // lblReusability
+            // 
+            this.lblReusability.AutoSize = true;
+            this.lblReusability.Location = new System.Drawing.Point(409, 356);
+            this.lblReusability.Name = "lblReusability";
+            this.lblReusability.Size = new System.Drawing.Size(58, 13);
+            this.lblReusability.TabIndex = 57;
+            this.lblReusability.Text = "Reusability";
             // 
             // frmMain
             // 
@@ -527,6 +803,24 @@
         private System.Windows.Forms.Label lblPerformanceCriteria;
         private System.Windows.Forms.Label lblHighTransactionRates;
         private System.Windows.Forms.Label lblHeavyHardwareUsage;
+        private System.Windows.Forms.ComboBox cbReusability;
+        private System.Windows.Forms.ComboBox cbPortability;
+        private System.Windows.Forms.ComboBox cbEndUserEfficiency;
+        private System.Windows.Forms.Label lblPortability;
+        private System.Windows.Forms.ComboBox cbMaintainability;
+        private System.Windows.Forms.Label lblMaintainability;
+        private System.Windows.Forms.Label lblEndUserEfficiency;
+        private System.Windows.Forms.Label lblReusability;
+        private System.Windows.Forms.ComboBox cbEaseOfOperation;
+        private System.Windows.Forms.ComboBox cbEaseOfInstallation;
+        private System.Windows.Forms.ComboBox cbOnlineDataEntry;
+        private System.Windows.Forms.ComboBox cbComplexComputations;
+        private System.Windows.Forms.Label lblOnlineDataEntry;
+        private System.Windows.Forms.ComboBox cbOnlineUpdating;
+        private System.Windows.Forms.Label lblOnlineUpdating;
+        private System.Windows.Forms.Label lblComplexComputations;
+        private System.Windows.Forms.Label lblEaseOfOperation;
+        private System.Windows.Forms.Label lblEaseOfInstallation;
     }
 }
 
