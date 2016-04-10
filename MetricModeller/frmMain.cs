@@ -22,6 +22,13 @@ namespace MetricModeller {
             new int[] { 7, 10, 15 },
             new int[] { 5, 7, 10 }
         };
+
+        private readonly double[][] projectComplexity = new double[][]
+        {
+            new double[] {2.4, 1.05, 2.5, 0.38},
+            new double[] {3.0, 1.12, 2.5, 0.35},
+            new double[] {3.6, 1.20, 2.5, 0.32}
+        };
         
         public frmMain(Dictionary<string, Tuple<decimal, int>> langData) {
             this.langData = langData;
@@ -38,6 +45,8 @@ namespace MetricModeller {
             double cost;
             double salary;
             double languageAvg;
+            double effort;
+            double duration;
 
             double.TryParse(txtAvgSalary.Text,      out salary);
             int.TryParse(txtLinesPerHour.Text,      out linesPerHour);
@@ -53,10 +62,26 @@ namespace MetricModeller {
 
             cost = calculateCost(manMonths, salary);
 
+            effort = calculateEffort(totalLines);
+
+            duration = calculateDuration(effort);
+
             Debug.WriteLine("Function Points: " + functionPoints);
             Debug.WriteLine("Total Lines: " + totalLines);
             Debug.WriteLine("Man Months: " + manMonths);
             Debug.WriteLine("Cost: $" + cost);
+        }
+
+        private double calculateEffort(int totalLines)
+        {
+            //ab * (KLOC) * bb
+            return projectComplexity[cbComplexity.SelectedIndex][0] * (totalLines * 1000) * projectComplexity[cbComplexity.SelectedIndex][1];
+        }
+
+        private double calculateDuration(double effort)
+        {
+            //cb * (effort) & db
+            return projectComplexity[cbComplexity.SelectedIndex][0] * (effort) * projectComplexity[cbComplexity.SelectedIndex][1];
         }
 
         private int calculateTotalLines(double functionPoints, double languageAvg)

@@ -79,6 +79,8 @@
             this.lblMaintainability = new System.Windows.Forms.Label();
             this.lblEndUserEfficiency = new System.Windows.Forms.Label();
             this.lblReusability = new System.Windows.Forms.Label();
+            this.cbComplexity = new System.Windows.Forms.ComboBox();
+            this.lblComplexity = new System.Windows.Forms.Label();
             this.gbTeam.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -193,7 +195,7 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(396, 491);
+            this.btnCalculate.Location = new System.Drawing.Point(743, 695);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(72, 54);
             this.btnCalculate.TabIndex = 20;
@@ -313,6 +315,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblComplexity);
+            this.groupBox1.Controls.Add(this.cbComplexity);
             this.groupBox1.Controls.Add(this.cbReusability);
             this.groupBox1.Controls.Add(this.cbPortability);
             this.groupBox1.Controls.Add(this.cbEndUserEfficiency);
@@ -344,7 +348,7 @@
             this.groupBox1.Controls.Add(this.lblHeavyHardwareUsage);
             this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(789, 454);
+            this.groupBox1.Size = new System.Drawing.Size(789, 543);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "The Project";
@@ -721,6 +725,28 @@
             this.lblReusability.TabIndex = 57;
             this.lblReusability.Text = "Reusability";
             // 
+            // cbComplexity
+            // 
+            this.cbComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbComplexity.FormattingEnabled = true;
+            this.cbComplexity.Items.AddRange(new object[] {
+            "Organic",
+            "Semi-detached",
+            "Embedded"});
+            this.cbComplexity.Location = new System.Drawing.Point(27, 457);
+            this.cbComplexity.Name = "cbComplexity";
+            this.cbComplexity.Size = new System.Drawing.Size(121, 21);
+            this.cbComplexity.TabIndex = 63;
+            // 
+            // lblComplexity
+            // 
+            this.lblComplexity.AutoSize = true;
+            this.lblComplexity.Location = new System.Drawing.Point(29, 441);
+            this.lblComplexity.Name = "lblComplexity";
+            this.lblComplexity.Size = new System.Drawing.Size(105, 13);
+            this.lblComplexity.TabIndex = 64;
+            this.lblComplexity.Text = "Complexity of Project";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -821,6 +847,8 @@
         private System.Windows.Forms.Label lblComplexComputations;
         private System.Windows.Forms.Label lblEaseOfOperation;
         private System.Windows.Forms.Label lblEaseOfInstallation;
+        private System.Windows.Forms.Label lblComplexity;
+        private System.Windows.Forms.ComboBox cbComplexity;
     }
 }
 
