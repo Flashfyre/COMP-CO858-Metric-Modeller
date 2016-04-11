@@ -34,7 +34,7 @@ namespace MetricModeller {
             InitializeComponent();
             populateLanguages();
         }
-
+        
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             int numOfPeople;
