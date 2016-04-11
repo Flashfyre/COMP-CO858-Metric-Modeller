@@ -143,6 +143,24 @@ namespace MetricModeller {
 
             return (input * wInput) + (output * wOutput) + (inquiry * wInquiry) + (masterFiles * wMasterFiles) + (interfaces * wInterfaces);
         }
+        private double calculateTeamCohesion(int numOfPeople)
+        {
+            string coheSelect = cbTeamCohesion.SelectedText;
+            int cohesionVal = 2;
+            switch (coheSelect)
+            {
+                case "No Past Experience":
+                    cohesionVal = 1;
+                    break;
+                case "Some Team Experience":
+                    cohesionVal = 2;
+                    break;
+                case "Experienced Team":
+                    cohesionVal = 3;
+                    break;
+            }
+            return numOfPeople / 2 * cohesionVal;
+        }
 
         private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople)
         {
@@ -177,6 +195,5 @@ namespace MetricModeller {
         {
 
         }
-
     }
 }
