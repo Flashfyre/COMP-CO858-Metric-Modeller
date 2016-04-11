@@ -195,5 +195,20 @@ namespace MetricModeller {
         {
 
         }
+
+        private void chkFramework_CheckedChanged(object sender, EventArgs e) {
+            bool isChecked = chkFramework.Checked;
+            cbFramework.Enabled = isChecked;
+            chkFrameworkPercentage.Enabled = isChecked;
+            trkFramework.Enabled = isChecked;
+        }
+
+        private void chkFrameworkPercentage_CheckedChanged(object sender, EventArgs e) {
+            bool isChecked = chkFrameworkPercentage.Checked;
+            cbFramework.Visible = !isChecked;
+            lblFrameworkPercentage.Visible = isChecked;
+            trkFramework.Visible = isChecked;
+            lblFrameworkPercentageScale.Visible = isChecked;
+        }
     }
 }
