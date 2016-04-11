@@ -177,9 +177,9 @@ namespace MetricModeller {
             double multiplier = 1.0D;
 
             if (chkFramework.Checked) {
-                if (chkFrameworkPercentage.Checked) {
-                    multiplier += (trkFramework.Value * 0.1D);
-                } else {
+                if (chkFrameworkPercentage.Checked)
+                    multiplier += (trkFramework.Value * 0.05D);
+                else {
                     switch (cbFramework.SelectedIndex) {
                         case 1:
                             multiplier += 0.15D;

@@ -416,9 +416,9 @@
             this.lblFrameworkPercentageScale.Location = new System.Drawing.Point(483, 101);
             this.lblFrameworkPercentageScale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrameworkPercentageScale.Name = "lblFrameworkPercentageScale";
-            this.lblFrameworkPercentageScale.Size = new System.Drawing.Size(413, 20);
+            this.lblFrameworkPercentageScale.Size = new System.Drawing.Size(414, 20);
             this.lblFrameworkPercentageScale.TabIndex = 73;
-            this.lblFrameworkPercentageScale.Text = "0%            20%           40%          60%           80%         100%";
+            this.lblFrameworkPercentageScale.Text = "+0%        +10%        +20%        +30%          +40%        +50%";
             this.lblFrameworkPercentageScale.Visible = false;
             // 
             // lblFrameworkPercentage
@@ -427,10 +427,9 @@
             this.lblFrameworkPercentage.Location = new System.Drawing.Point(479, 17);
             this.lblFrameworkPercentage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrameworkPercentage.Name = "lblFrameworkPercentage";
-            this.lblFrameworkPercentage.Size = new System.Drawing.Size(450, 40);
+            this.lblFrameworkPercentage.Size = new System.Drawing.Size(415, 40);
             this.lblFrameworkPercentage.TabIndex = 71;
-            this.lblFrameworkPercentage.Text = "Percentage Increase\r\n(100% means the framework doubles the project\'s productivity" +
-    ")";
+            this.lblFrameworkPercentage.Text = "Percentage Increase\r\n(+50% means the framework multiplies productivity by 1.5)";
             this.lblFrameworkPercentage.Visible = false;
             // 
             // chkFrameworkPercentage
