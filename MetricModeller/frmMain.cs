@@ -52,7 +52,7 @@ namespace MetricModeller {
             int.TryParse(txtLinesPerHour.Text, out linesPerHour);
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
 
-            languageAvg = 16;   //TOFIX: REPLACE 16 WITH ACTUAL LANGUAGE AVERAGE
+            languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
 
             functionPoints = calculateFunctionPoints();
 
