@@ -48,7 +48,8 @@ namespace MetricModeller {
             double effort;
             double duration;
 
-            double.TryParse(txtAvgSalary.Text, out salary);
+            //double.TryParse(txtAvgSalary.Text, out salary);
+            salary = 32D;
             int.TryParse(txtLinesPerHour.Text, out linesPerHour);
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
 
@@ -74,16 +75,20 @@ namespace MetricModeller {
 
         private double calculateEffort(int totalLines)
         {
-            //ab * (KLOC) * bb
-            return projectComplexity[cbComplexity.SelectedIndex][0] * (totalLines * 1000) *
-                projectComplexity[cbComplexity.SelectedIndex][1];
+            // Previous formula: ab * (KLOC) * bb
+            // Current formula: a * kloc^b
+            return projectComplexity[cbComplexity.SelectedIndex][0] *
+                Math.Pow((totalLines * 1000), projectComplexity[cbComplexity.SelectedIndex][1]);
         }
 
         private double calculateDuration(double effort)
         {
-            //cb * (effort) & db
-            return projectComplexity[cbComplexity.SelectedIndex][0] * (effort) *
-                projectComplexity[cbComplexity.SelectedIndex][1];
+            // Previous formula: cb * (effort) & db
+            // Current formula: 2.5 * effort^EX
+            /*projectComplexity[cbComplexity.SelectedIndex][0] * (effort) *
+              projectComplexity[cbComplexity.SelectedIndex][1];*/
+            return projectComplexity[cbComplexity.SelectedIndex][2] *
+                Math.Pow(effort, projectComplexity[cbComplexity.SelectedIndex][3]);
         }
 
         private int calculateTotalLines(double functionPoints, double languageAvg)
@@ -169,9 +174,10 @@ namespace MetricModeller {
             return totalLines / (linesPerHour * calculateTeamCohesion(numOfPeople));
         }
 
-        private double calculateCost(double manMonths, double salary)
+        private double calculateCost(double effort, double salary)
         {
-            return manMonths * (salary / 12);
+            //manMonths * (salary / 12)
+            return effort * (salary * 120);
         }
 
         private double getFrameworkProductivityMultiplier() {
@@ -238,6 +244,37 @@ namespace MetricModeller {
             lblFrameworkPercentage.Visible = isChecked;
             trkFramework.Visible = isChecked;
             lblFrameworkPercentageScale.Visible = isChecked;
+        }
+
+        private void btnTest_Click(object sender, EventArgs e) {
+            cbLang.SelectedIndex = 70;
+            txtInput.Text = "2";
+            cbInput.SelectedIndex = 0;
+            txtOutput.Text = "2";
+            cbOutput.SelectedIndex = 0;
+            txtInquiry.Text = "2";
+            cbInquiry.SelectedIndex = 0;
+            txtMasterFiles.Text = "2";
+            cbMasterFiles.SelectedIndex = 0;
+            txtInterfaces.Text = "2";
+            cbInterfaces.SelectedIndex = 0;
+            cbDataComm.SelectedIndex = 0;
+            cbDistributedData.SelectedIndex = 0;
+            cbPerformanceCriteria.SelectedIndex = 0;
+            cbHeavyHardwareUsage.SelectedIndex = 0;
+            cbHighTransactionRates.SelectedIndex = 0;
+            cbOnlineDataEntry.SelectedIndex = 0;
+            cbOnlineUpdating.SelectedIndex = 0;
+            cbComplexComputations.SelectedIndex = 0;
+            cbEaseOfInstallation.SelectedIndex = 0;
+            cbEaseOfOperation.SelectedIndex = 0;
+            cbPortability.SelectedIndex = 0;
+            cbMaintainability.SelectedIndex = 0;
+            cbEndUserEfficiency.SelectedIndex = 0;
+            cbReusability.SelectedIndex = 0;
+            cbComplexity.SelectedIndex = 0;
+            txtNumOfPeople.Text = "6";
+            cbTeamCohesion.SelectedIndex = 0;
         }
     }
 }

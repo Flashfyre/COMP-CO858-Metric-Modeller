@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.gbTeam = new System.Windows.Forms.GroupBox();
             this.trkFrameworkPercentage = new System.Windows.Forms.GroupBox();
+            this.btnTest = new System.Windows.Forms.Button();
             this.gbFramework = new System.Windows.Forms.GroupBox();
             this.lblFrameworkPercentageScale = new System.Windows.Forms.Label();
             this.lblFrameworkPercentage = new System.Windows.Forms.Label();
@@ -350,6 +351,7 @@
             // 
             // trkFrameworkPercentage
             // 
+            this.trkFrameworkPercentage.Controls.Add(this.btnTest);
             this.trkFrameworkPercentage.Controls.Add(this.gbFramework);
             this.trkFrameworkPercentage.Controls.Add(this.cbTeamCohesion);
             this.trkFrameworkPercentage.Controls.Add(this.label7);
@@ -393,6 +395,16 @@
             this.trkFrameworkPercentage.TabIndex = 31;
             this.trkFrameworkPercentage.TabStop = false;
             this.trkFrameworkPercentage.Text = "The Project";
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(1011, 24);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(160, 37);
+            this.btnTest.TabIndex = 71;
+            this.btnTest.Text = "Fill with Test Data";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // gbFramework
             // 
@@ -1043,5 +1055,6 @@
         private System.Windows.Forms.Label lblFrameworkPercentage;
         private System.Windows.Forms.CheckBox chkFrameworkPercentage;
         private System.Windows.Forms.Label lblFrameworkPercentageScale;
+        private System.Windows.Forms.Button btnTest;
     }
 }
