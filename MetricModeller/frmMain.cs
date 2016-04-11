@@ -78,7 +78,7 @@ namespace MetricModeller {
             // Previous formula: ab * (KLOC) * bb
             // Current formula: a * kloc^b
             return projectComplexity[cbComplexity.SelectedIndex][0] *
-                Math.Pow((totalLines * 1000), projectComplexity[cbComplexity.SelectedIndex][1]);
+                Math.Pow((totalLines * 0.001), projectComplexity[cbComplexity.SelectedIndex][1]);
         }
 
         private double calculateDuration(double effort)
