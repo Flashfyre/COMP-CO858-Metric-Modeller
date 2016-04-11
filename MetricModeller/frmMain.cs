@@ -76,13 +76,14 @@ namespace MetricModeller {
         {
             //ab * (KLOC) * bb
             return projectComplexity[cbComplexity.SelectedIndex][0] * (totalLines * 1000) *
-                projectComplexity[cbComplexity.SelectedIndex][1] * getFrameworkProductivityMultiplier();
+                projectComplexity[cbComplexity.SelectedIndex][1];
         }
 
         private double calculateDuration(double effort)
         {
             //cb * (effort) & db
-            return projectComplexity[cbComplexity.SelectedIndex][0] * (effort) * projectComplexity[cbComplexity.SelectedIndex][1];
+            return projectComplexity[cbComplexity.SelectedIndex][0] * (effort) *
+                projectComplexity[cbComplexity.SelectedIndex][1];
         }
 
         private int calculateTotalLines(double functionPoints, double languageAvg)
@@ -92,7 +93,7 @@ namespace MetricModeller {
 
         private double calculateFunctionPoints()
         {
-            return (calculateUFP() * calculateTCF());
+            return (calculateUFP() * calculateTCF()) * getFrameworkProductivityMultiplier();
         }
 
         private double calculateTCF()
@@ -178,20 +179,20 @@ namespace MetricModeller {
 
             if (chkFramework.Checked) {
                 if (chkFrameworkPercentage.Checked)
-                    multiplier += (trkFramework.Value * 0.05D);
+                    multiplier -= (trkFramework.Value * 0.025D);
                 else {
                     switch (cbFramework.SelectedIndex) {
                         case 1:
-                            multiplier += 0.15D;
+                            multiplier -= 0.075D;
                             break;
                         case 2:
-                            multiplier += 0.25D;
+                            multiplier -= 0.125D;
                             break;
                         case 3:
-                            multiplier += 0.35D;
+                            multiplier -= 0.175D;
                             break;
                         case 4:
-                            multiplier += 0.5D;
+                            multiplier -= 0.25D;
                             break;
                     }
                 }
