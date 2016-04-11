@@ -50,12 +50,12 @@
             this.trkFrameworkPercentage = new System.Windows.Forms.GroupBox();
             this.gbFramework = new System.Windows.Forms.GroupBox();
             this.lblFrameworkPercentageScale = new System.Windows.Forms.Label();
-            this.trkFramework = new System.Windows.Forms.TrackBar();
             this.lblFrameworkPercentage = new System.Windows.Forms.Label();
             this.chkFrameworkPercentage = new System.Windows.Forms.CheckBox();
             this.chkFramework = new System.Windows.Forms.CheckBox();
             this.cbFramework = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.trkFramework = new System.Windows.Forms.TrackBar();
             this.cbTeamCohesion = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblComplexity = new System.Windows.Forms.Label();
@@ -421,23 +421,16 @@
             this.lblFrameworkPercentageScale.Text = "0%            20%           40%          60%           80%         100%";
             this.lblFrameworkPercentageScale.Visible = false;
             // 
-            // trkFramework
-            // 
-            this.trkFramework.Location = new System.Drawing.Point(472, 62);
-            this.trkFramework.Name = "trkFramework";
-            this.trkFramework.Size = new System.Drawing.Size(430, 69);
-            this.trkFramework.TabIndex = 72;
-            this.trkFramework.Visible = false;
-            // 
             // lblFrameworkPercentage
             // 
             this.lblFrameworkPercentage.AutoSize = true;
-            this.lblFrameworkPercentage.Location = new System.Drawing.Point(479, 30);
+            this.lblFrameworkPercentage.Location = new System.Drawing.Point(479, 17);
             this.lblFrameworkPercentage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrameworkPercentage.Name = "lblFrameworkPercentage";
-            this.lblFrameworkPercentage.Size = new System.Drawing.Size(423, 20);
+            this.lblFrameworkPercentage.Size = new System.Drawing.Size(450, 40);
             this.lblFrameworkPercentage.TabIndex = 71;
-            this.lblFrameworkPercentage.Text = "Percentage Increase (100% means productivity is doubled)";
+            this.lblFrameworkPercentage.Text = "Percentage Increase\r\n(100% means the framework doubles the project\'s productivity" +
+    ")";
             this.lblFrameworkPercentage.Visible = false;
             // 
             // chkFrameworkPercentage
@@ -489,6 +482,14 @@
             this.label8.Size = new System.Drawing.Size(158, 20);
             this.label8.TabIndex = 68;
             this.label8.Text = "Effect on Productivity";
+            // 
+            // trkFramework
+            // 
+            this.trkFramework.Location = new System.Drawing.Point(472, 62);
+            this.trkFramework.Name = "trkFramework";
+            this.trkFramework.Size = new System.Drawing.Size(430, 69);
+            this.trkFramework.TabIndex = 72;
+            this.trkFramework.Visible = false;
             // 
             // cbTeamCohesion
             // 
