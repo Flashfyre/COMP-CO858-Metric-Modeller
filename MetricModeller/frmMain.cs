@@ -164,7 +164,7 @@ namespace MetricModeller {
 
         private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople)
         {
-            return totalLines / (linesPerHour * numOfPeople);
+            return totalLines / (linesPerHour * calculateTeamCohesion(numOfPeople));
         }
 
         private double calculateCost(double manMonths, double salary)
