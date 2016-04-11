@@ -75,7 +75,8 @@ namespace MetricModeller {
         private double calculateEffort(int totalLines)
         {
             //ab * (KLOC) * bb
-            return projectComplexity[cbComplexity.SelectedIndex][0] * (totalLines * 1000) * projectComplexity[cbComplexity.SelectedIndex][1];
+            return projectComplexity[cbComplexity.SelectedIndex][0] * (totalLines * 1000) *
+                projectComplexity[cbComplexity.SelectedIndex][1] * getFrameworkProductivityMultiplier();
         }
 
         private double calculateDuration(double effort)
@@ -170,6 +171,33 @@ namespace MetricModeller {
         private double calculateCost(double manMonths, double salary)
         {
             return manMonths * (salary / 12);
+        }
+
+        private double getFrameworkProductivityMultiplier() {
+            double multiplier = 1.0D;
+
+            if (chkFramework.Checked) {
+                if (chkFrameworkPercentage.Checked) {
+                    multiplier += (trkFramework.Value * 0.1D);
+                } else {
+                    switch (cbFramework.SelectedIndex) {
+                        case 1:
+                            multiplier += 0.15D;
+                            break;
+                        case 2:
+                            multiplier += 0.25D;
+                            break;
+                        case 3:
+                            multiplier += 0.35D;
+                            break;
+                        case 4:
+                            multiplier += 0.5D;
+                            break;
+                    }
+                }
+            }
+
+            return multiplier;
         }
 
         private void populateLanguages() {
