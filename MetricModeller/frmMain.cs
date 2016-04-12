@@ -291,7 +291,7 @@ namespace MetricModeller {
         }
 
         private void btnTest_Click(object sender, EventArgs e) {
-            cbLang.SelectedIndex = 70;
+            cbLang.SelectedIndex = 2;
             txtInput.Text = "2";
             cbInput.SelectedIndex = 0;
             txtOutput.Text = "2";
