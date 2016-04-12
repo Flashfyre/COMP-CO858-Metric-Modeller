@@ -101,6 +101,7 @@
             this.lblPerformanceCriteria = new System.Windows.Forms.Label();
             this.lblHighTransactionRates = new System.Windows.Forms.Label();
             this.lblHeavyHardwareUsage = new System.Windows.Forms.Label();
+            this.chkHistory = new System.Windows.Forms.CheckBox();
             this.grbDoc.SuspendLayout();
             this.grbTeam.SuspendLayout();
             this.gbFramework.SuspendLayout();
@@ -1048,11 +1049,22 @@
             this.lblHeavyHardwareUsage.Text = "Heavy Hardware\r\n Usage";
             this.lblHeavyHardwareUsage.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // chkHistory
+            // 
+            this.chkHistory.AutoSize = true;
+            this.chkHistory.Location = new System.Drawing.Point(834, 653);
+            this.chkHistory.Name = "chkHistory";
+            this.chkHistory.Size = new System.Drawing.Size(215, 24);
+            this.chkHistory.TabIndex = 149;
+            this.chkHistory.Text = "Calculate with History File";
+            this.chkHistory.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 712);
+            this.Controls.Add(this.chkHistory);
             this.Controls.Add(this.grbDoc);
             this.Controls.Add(this.grbTeam);
             this.Controls.Add(this.cbInterfaces);
@@ -1207,6 +1219,7 @@
         private System.Windows.Forms.Label lblPerformanceCriteria;
         private System.Windows.Forms.Label lblHighTransactionRates;
         private System.Windows.Forms.Label lblHeavyHardwareUsage;
+        private System.Windows.Forms.CheckBox chkHistory;
 
     }
 }

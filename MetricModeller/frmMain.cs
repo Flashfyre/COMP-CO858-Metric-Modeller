@@ -15,6 +15,9 @@ namespace MetricModeller {
     public partial class frmMain : Form 
     {
         private Dictionary<string, Tuple<decimal, int>> langData;
+
+        private Dictionary<string, double[]> histData;
+
         private readonly int[][] weightingFactors = new int[][] {
             new int[] { 3, 4, 6 },
             new int[] { 4, 5, 7 },
@@ -22,6 +25,7 @@ namespace MetricModeller {
             new int[] { 7, 10, 15 },
             new int[] { 5, 7, 10 }
         };
+
         private readonly double[][] projectComplexity = new double[][]
         {
             new double[] {2.4, 1.05, 2.5, 0.38},
@@ -29,14 +33,20 @@ namespace MetricModeller {
             new double[] {3.6, 1.20, 2.5, 0.32}
         };
 
-        public frmMain(Dictionary<string, Tuple<decimal, int>> langData) {
+        public frmMain(Dictionary<string, Tuple<decimal, int>> langData,
+            Dictionary<string, double[]> histData) {
             this.langData = langData;
+            this.histData = histData;
             InitializeComponent();
             populateLanguages();
         }
         
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            calculateOutput(chkHistory.Checked);
+        }
+
+        private void calculateOutput(bool useHistory) {
             int totalLines;
             int numOfPeople = 6;
             double functionPoints;
@@ -47,7 +57,6 @@ namespace MetricModeller {
             double duration;
             double docDuration;
             double docCost;
-
 
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
             salary = getSalaryForTeam(numOfPeople, 32D);
@@ -62,15 +71,41 @@ namespace MetricModeller {
 
             cost = calculateCost(effort, salary);
 
-            duration = getDurationForTeam(numOfPeople, calculateDuration(effort));
+            duration = getDurationForTeam(numOfPeople, calculateDuration(effort, numOfPeople));
 
             docCost = calculateDocCost();
 
             docDuration = calculateDocDuration();
 
+            if (useHistory) {
+                if (histData.ContainsKey(cbLang.Text)) {
+                    double[] data = histData[cbLang.Text];
+                    int histTotalLines = (int)data[5],
+                    histNumOfPeople = (int)data[0];
+                    double histFunctionPoints = data[1],
+                    histDuration = data[2],
+                    histCost = data[3],
+                    histEffort = data[4],
+                    linesOfCodeProportion =
+                        (totalLines / functionPoints) / (histTotalLines / histFunctionPoints),
+                    durationProportion =
+                        (duration / functionPoints) / (histDuration / histFunctionPoints),
+                    costProportion =
+                        (cost / functionPoints) / (histCost / histFunctionPoints),
+                    effortProportion =
+                        (effort / functionPoints) / (histEffort / histFunctionPoints);
+                    totalLines = (int) ((double) totalLines * linesOfCodeProportion);
+                    duration *= durationProportion;
+                    cost *= costProportion;
+                    effort *= effortProportion;
+                } else
+                    MessageBox.Show(String.Format(
+                        "Error: The selected language '%s' does not exist in the history file.", cbLang.Text));
+            }
+
             MessageBox.Show(
                 "DEVELOPMENT\n" +
-                "Function Points: " + functionPoints + "\n" + 
+                "Function Points: " + functionPoints + "\n" +
                 "Total Lines: " + totalLines + "\n" +
                 "Cost: $" + Math.Round(cost, 2) + "\n" +
                 "Effort: " + Math.Round(effort, 2) + " person-months\n" +
@@ -89,14 +124,15 @@ namespace MetricModeller {
                 Math.Pow((totalLines * 0.001), projectComplexity[cbComplexity.SelectedIndex][1]);
         }
 
-        private double calculateDuration(double effort)
+        private double calculateDuration(double effort, int numOfPeople)
         {
             // Previous formula: cb * (effort) & db
             // Current formula: 2.5 * effort^EX
             /*projectComplexity[cbComplexity.SelectedIndex][0] * (effort) *
               projectComplexity[cbComplexity.SelectedIndex][1];*/
-            return projectComplexity[cbComplexity.SelectedIndex][2] *
-                Math.Pow(effort, projectComplexity[cbComplexity.SelectedIndex][3]);
+            return (projectComplexity[cbComplexity.SelectedIndex][2] *
+                Math.Pow(effort, projectComplexity[cbComplexity.SelectedIndex][3])) /
+                (calculateTeamCohesion(numOfPeople));
         }
 
         private int calculateTotalLines(double functionPoints, double languageAvg)
@@ -223,7 +259,7 @@ namespace MetricModeller {
         }
         private double calculateTeamCohesion(int numOfPeople)
         {
-            string coheSelect = cbTeamCohesion.SelectedText;
+            string coheSelect = cbTeamCohesion.Text;
             double cohesionVal = 0.75;
             switch (coheSelect)
             {
@@ -337,7 +373,7 @@ namespace MetricModeller {
         }
 
         private void btnTest_Click(object sender, EventArgs e) {
-            cbLang.SelectedIndex = 2;
+            cbLang.SelectedIndex = 1;
             txtInput.Text = "2";
             cbInput.SelectedIndex = 0;
             txtOutput.Text = "2";
@@ -405,8 +441,8 @@ namespace MetricModeller {
                 int numberOfStudents = (numOfPeople * student_Entry_Factor_percent) / 100;
                 int numberOfExpert = (numOfPeople * intermediate_Expert_Factor_percent) / 100;
 
-                double studentDuration = (duration * 1.5 * student_Entry_Factor_percent / 100);
-                double expertDuration = (duration * 1 * intermediate_Expert_Factor_percent / 100);
+                double studentDuration = (duration * 1.25 * student_Entry_Factor_percent / 100);
+                double expertDuration = (duration * 0.75 * intermediate_Expert_Factor_percent / 100);
 
                 double totalDuration = studentDuration + expertDuration;
 
@@ -426,7 +462,7 @@ namespace MetricModeller {
                 int numberOfExpert = (numOfPeople * intermediate_Expert_Factor_percent) / 100;
 
                 double studentSalary = (numberOfStudents * 24);
-                double expertSalary = (numberOfExpert * 32);
+                double expertSalary = (numberOfExpert * 40);
                 double averageSalary = (studentSalary + expertSalary) / numOfPeople;
 
                 return averageSalary;
