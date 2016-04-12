@@ -37,20 +37,16 @@ namespace MetricModeller {
         
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            int numOfPeople;
-            int linesPerHour;
             int totalLines;
+            int numOfPeople = 6;
             double functionPoints;
-            double manMonths;
             double cost;
             double salary;
             double languageAvg;
             double effort;
             double duration;
 
-            //double.TryParse(txtAvgSalary.Text, out salary);
             salary = 32D;
-            int.TryParse(txtLinesPerHour.Text, out linesPerHour);
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
 
             languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
@@ -59,11 +55,9 @@ namespace MetricModeller {
 
             totalLines = calculateTotalLines(functionPoints, languageAvg);
 
-            manMonths = calculateManMonths(totalLines, linesPerHour, numOfPeople);
-
-            cost = calculateCost(manMonths, salary);
-
             effort = calculateEffort(totalLines);
+
+            cost = calculateCost(effort, salary);
 
             duration = calculateDuration(effort);
 
