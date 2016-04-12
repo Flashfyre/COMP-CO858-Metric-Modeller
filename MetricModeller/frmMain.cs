@@ -45,6 +45,9 @@ namespace MetricModeller {
             double languageAvg;
             double effort;
             double duration;
+            double docDuration;
+            double docCost;
+
 
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
             salary = getSalaryForTeam(numOfPeople, 32D);
@@ -61,13 +64,21 @@ namespace MetricModeller {
 
             duration = getDurationForTeam(numOfPeople, calculateDuration(effort));
 
+            docCost = calculateDocCost();
+
+            docDuration = calculateDocDuration();
+
             MessageBox.Show(
+                "DEVELOPMENT\n" +
                 "Function Points: " + functionPoints + "\n" + 
                 "Total Lines: " + totalLines + "\n" +
-                "Cost: " + cost + "\n" +
-                "Effort: " + effort + "\n" +
-                "Duration: " + duration + "\n"
-                );
+                "Cost: $" + Math.Round(cost, 2) + "\n" +
+                "Effort: " + Math.Round(effort, 2) + "\n" +
+                "Duration: " + Math.Round(duration, 2) + " months\n\n" +
+                "DOCUMENTATION\n" +
+                "Documentation Duration: " + docDuration + " month/s\n" +
+                "Documentation Cost: $" + docCost + "\n"
+            );
         }
 
         private double calculateEffort(int totalLines)
@@ -229,6 +240,25 @@ namespace MetricModeller {
             return numOfPeople / 2 * cohesionVal;
         }
 
+        private double calculateDocDuration()
+        {
+           double pages = Convert.ToDouble(txtDocPages.Text);
+           double writers = 2;
+
+           double dur = (pages * 3) / writers;
+            return dur/120;
+        }
+
+        private double calculateDocCost()
+        {
+            int pages = Convert.ToInt32(txtDocPages.Text);
+            int wage = 22;
+
+            int dur = (pages * 3);
+            int cost = dur * wage;
+            return cost;
+        }
+
         private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople)
         {
             return totalLines / (linesPerHour * calculateTeamCohesion(numOfPeople));
@@ -335,6 +365,7 @@ namespace MetricModeller {
             cbComplexity.SelectedIndex = 0;
             txtNumOfPeople.Text = "6";
             cbTeamCohesion.SelectedIndex = 0;
+            txtDocPages.Text = "80";
         }
 
 
@@ -423,5 +454,19 @@ namespace MetricModeller {
                 checkUnusedCode.Visible = false;
             }
         }
+
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbDoc_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
