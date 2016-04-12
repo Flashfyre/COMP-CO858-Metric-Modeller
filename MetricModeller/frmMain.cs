@@ -12,8 +12,9 @@ using System.Diagnostics;
 
 namespace MetricModeller {
 
-    public partial class frmMain : Form 
-    {
+    public partial class frmMain : Form {
+
+        #region Samuel's Code
         private Dictionary<string, Tuple<decimal, int>> langData;
 
         private Dictionary<string, double[]> histData;
@@ -25,6 +26,7 @@ namespace MetricModeller {
             new int[] { 7, 10, 15 },
             new int[] { 5, 7, 10 }
         };
+        #endregion Samuel's Code
 
         private readonly double[][] projectComplexity = new double[][]
         {
@@ -33,6 +35,7 @@ namespace MetricModeller {
             new double[] {3.6, 1.20, 2.5, 0.32}
         };
 
+        #region Samuel's Code
         public frmMain(Dictionary<string, Tuple<decimal, int>> langData,
             Dictionary<string, double[]> histData) {
             this.langData = langData;
@@ -40,7 +43,8 @@ namespace MetricModeller {
             InitializeComponent();
             populateLanguages();
         }
-        
+        #endregion Samuel's Code
+
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             calculateOutput(chkHistory.Checked);
@@ -77,6 +81,7 @@ namespace MetricModeller {
 
             docDuration = calculateDocDuration();
 
+            #region Samuel's Code
             if (useHistory) {
                 if (histData.ContainsKey(cbLang.Text)) {
                     double[] data = histData[cbLang.Text];
@@ -102,6 +107,7 @@ namespace MetricModeller {
                     MessageBox.Show(String.Format(
                         "Error: The selected language '%s' does not exist in the history file.", cbLang.Text));
             }
+            #endregion Samuel's Code
 
             MessageBox.Show(
                 "DEVELOPMENT\n" +
@@ -306,6 +312,7 @@ namespace MetricModeller {
             return effort * (salary * 120);
         }
 
+        #region Samuel's Code
         private double getFrameworkProductivityMultiplier() {
             double multiplier = 1.0D;
 
@@ -341,6 +348,7 @@ namespace MetricModeller {
                 cbLang.Items.Add(curLang.Key);
             }
         }
+        #endregion Samuel's Code
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -357,6 +365,7 @@ namespace MetricModeller {
 
         }
 
+        #region Samuel's Code
         private void chkFramework_CheckedChanged(object sender, EventArgs e) {
             bool isChecked = chkFramework.Checked;
             cbFramework.Enabled = isChecked;
@@ -403,8 +412,7 @@ namespace MetricModeller {
             cbTeamCohesion.SelectedIndex = 0;
             txtDocPages.Text = "80";
         }
-
-
+        #endregion Samuel's Code
 
         private void chkExperienceFactor_CheckedChanged(object sender, EventArgs e)
         {
@@ -469,12 +477,6 @@ namespace MetricModeller {
             }
 
             return salary;
-        }
-
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void checkHighlyModular_CheckedChanged(object sender, EventArgs e)

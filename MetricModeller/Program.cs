@@ -8,6 +8,7 @@ using System.Windows.Forms;
 namespace MetricModeller {
     static class Program {
 
+        #region Samuel's Code
         private const string langFilePath = "../../../language_prod.csv";
         private const string histFilePath = "../../../history.csv";
 
@@ -74,6 +75,6 @@ namespace MetricModeller {
 
             return false;
         }
-
+        #endregion Samuel's Code
     }
 }
