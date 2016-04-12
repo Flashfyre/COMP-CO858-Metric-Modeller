@@ -65,61 +65,66 @@ namespace MetricModeller {
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
             salary = getSalaryForTeam(numOfPeople, 32D);
 
-            languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
+            try {
 
-            functionPoints = calculateFunctionPoints();
+                if (cbLang.SelectedIndex == -1)
+                    return;
+                
+                languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
 
-            totalLines = calculateTotalLines(functionPoints, languageAvg);
+                functionPoints = calculateFunctionPoints();
 
-            effort = calculateEffort(totalLines);
+                totalLines = calculateTotalLines(functionPoints, languageAvg);
 
-            cost = calculateCost(effort, salary);
+                effort = calculateEffort(totalLines);
 
-            duration = getDurationForTeam(numOfPeople, calculateDuration(effort, numOfPeople));
+                cost = calculateCost(effort, salary);
 
-            docCost = calculateDocCost();
+                duration = getDurationForTeam(numOfPeople, calculateDuration(effort, numOfPeople));
 
-            docDuration = calculateDocDuration();
+                docCost = calculateDocCost();
 
-            #region Samuel's Code
-            if (useHistory) {
-                if (histData.ContainsKey(cbLang.Text)) {
-                    double[] data = histData[cbLang.Text];
-                    int histTotalLines = (int)data[5],
-                    histNumOfPeople = (int)data[0];
-                    double histFunctionPoints = data[1],
-                    histDuration = data[2],
-                    histCost = data[3],
-                    histEffort = data[4],
-                    linesOfCodeProportion =
-                        (totalLines / functionPoints) / (histTotalLines / histFunctionPoints),
-                    durationProportion =
-                        (duration / functionPoints) / (histDuration / histFunctionPoints),
-                    costProportion =
-                        (cost / functionPoints) / (histCost / histFunctionPoints),
-                    effortProportion =
-                        (effort / functionPoints) / (histEffort / histFunctionPoints);
-                    totalLines = (int) ((double) totalLines * linesOfCodeProportion);
-                    duration *= durationProportion;
-                    cost *= costProportion;
-                    effort *= effortProportion;
-                } else
-                    MessageBox.Show(String.Format(
-                        "Error: The selected language '%s' does not exist in the history file.", cbLang.Text));
+                docDuration = calculateDocDuration();
+
+                #region Samuel's Code
+                if (useHistory) {
+                    if (histData.ContainsKey(cbLang.Text)) {
+                        double[] data = histData[cbLang.Text];
+                        int histTotalLines = (int)data[5],
+                        histNumOfPeople = (int)data[0];
+                        double histFunctionPoints = data[1],
+                        histDuration = data[2],
+                        histCost = data[3],
+                        histEffort = data[4],
+                        linesOfCodeProportion =
+                            (totalLines / functionPoints) / (histTotalLines / histFunctionPoints),
+                        durationProportion =
+                            (duration / functionPoints) / (histDuration / histFunctionPoints),
+                        costProportion =
+                            (cost / functionPoints) / (histCost / histFunctionPoints),
+                        effortProportion =
+                            (effort / functionPoints) / (histEffort / histFunctionPoints);
+                        totalLines = (int)((double)totalLines * linesOfCodeProportion);
+                        duration *= durationProportion;
+                        cost *= costProportion;
+                        effort *= effortProportion;
+                    } else
+                        MessageBox.Show(String.Format(
+                            "Error: The selected language '%s' does not exist in the history file.", cbLang.Text));
+                }
+                MessageBox.Show(
+                    "DEVELOPMENT\n" +
+                    "Function Points: " + functionPoints + "\n" +
+                    "Total Lines: " + totalLines + "\n" +
+                    "Cost: $" + Math.Round(cost, 2) + "\n" +
+                    "Effort: " + Math.Round(effort, 2) + " person-months\n" +
+                    "Duration: " + Math.Round(duration, 2) + " month(s)\n\n" +
+                    "DOCUMENTATION\n" +
+                    "Documentation Duration: " + docDuration + " month(s)\n" +
+                    "Documentation Cost: $" + docCost + "\n");
+                #endregion Samuel's Code
+            } catch (IndexOutOfRangeException e) {
             }
-            #endregion Samuel's Code
-
-            MessageBox.Show(
-                "DEVELOPMENT\n" +
-                "Function Points: " + functionPoints + "\n" +
-                "Total Lines: " + totalLines + "\n" +
-                "Cost: $" + Math.Round(cost, 2) + "\n" +
-                "Effort: " + Math.Round(effort, 2) + " person-months\n" +
-                "Duration: " + Math.Round(duration, 2) + " month(s)\n\n" +
-                "DOCUMENTATION\n" +
-                "Documentation Duration: " + docDuration + " month(s)\n" +
-                "Documentation Cost: $" + docCost + "\n"
-            );
         }
 
         private double calculateEffort(int totalLines)
@@ -253,7 +258,7 @@ namespace MetricModeller {
             int.TryParse(txtInquiry.Text, out inquiry);
             int.TryParse(txtMasterFiles.Text, out masterFiles);
             int.TryParse(txtInterfaces.Text, out interfaces);
-
+           
             wInput = weightingFactors[0][cbInput.SelectedIndex];
             wInput = weightingFactors[0][cbInput.SelectedIndex];
             wOutput = weightingFactors[1][cbOutput.SelectedIndex];
