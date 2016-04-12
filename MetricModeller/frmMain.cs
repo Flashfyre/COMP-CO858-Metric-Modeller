@@ -224,20 +224,20 @@ namespace MetricModeller {
         private double calculateTeamCohesion(int numOfPeople)
         {
             string coheSelect = cbTeamCohesion.SelectedText;
-            int cohesionVal = 2;
+            double cohesionVal = 0.75;
             switch (coheSelect)
             {
                 case "No Past Experience":
-                    cohesionVal = 1;
+                    cohesionVal = 0.6;
                     break;
                 case "Some Team Experience":
-                    cohesionVal = 2;
+                    cohesionVal = 0.75;
                     break;
                 case "Experienced Team":
-                    cohesionVal = 3;
+                    cohesionVal = 0.9;
                     break;
             }
-            return numOfPeople / 2 * cohesionVal;
+            return numOfPeople * cohesionVal;
         }
 
         private double calculateDocDuration()
@@ -454,19 +454,5 @@ namespace MetricModeller {
                 checkUnusedCode.Visible = false;
             }
         }
-
-        
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grbDoc_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
