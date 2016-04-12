@@ -328,10 +328,10 @@ namespace MetricModeller {
         }
 
 
-        
+
         private void chkExperienceFactor_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             if (chkExperienceFactor.Checked)
             {
                 txtIntermediateExpert.Visible = true;
@@ -339,11 +339,43 @@ namespace MetricModeller {
                 lblIntermediateExpert.Visible = true;
                 lblPercent1.Visible = true;
                 lblPercent2.Visible = true;
-                lblStudentsEntry.Visible = true;                    
+                lblStudentsEntry.Visible = true;
             }
-           
-            
+            else
+            {
+                txtIntermediateExpert.Visible = false;
+                txtStudentsEntry.Visible = false;
+                lblIntermediateExpert.Visible = false;
+                lblPercent1.Visible = false;
+                lblPercent2.Visible = false;
+                lblStudentsEntry.Visible = false;
+            }
+
         }
+
+        private void AddExperienceFactor(int numOfPeople, double salary, double duration)
+        {
+            int student_Entry_Factor_percent, intermediate_Expert_Factor_percent;
+            if (chkExperienceFactor.Checked)
+            {
+                int.TryParse(txtStudentsEntry.Text, out student_Entry_Factor_percent);
+                int.TryParse(txtIntermediateExpert.Text, out intermediate_Expert_Factor_percent);
+
+                int numberOfStudents = (numOfPeople * student_Entry_Factor_percent) / 100;
+                int numberOfExpert = (numOfPeople * intermediate_Expert_Factor_percent) / 100;
+
+                double studentSalary = (numberOfStudents * 24);
+                double expertSalary = (numberOfExpert * 32);
+                double averageSalary = (studentSalary + expertSalary) / numOfPeople;
+
+                double studentDuration = (duration * 1.5 * student_Entry_Factor_percent / 100);
+                double expertDuration = (duration * 1.5 * intermediate_Expert_Factor_percent / 100);
+
+                double totalDuration = studentDuration + expertDuration;
+            }
+
+        }
+
 
         private void label8_Click(object sender, EventArgs e)
         {
