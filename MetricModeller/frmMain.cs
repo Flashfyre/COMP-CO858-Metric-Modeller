@@ -122,17 +122,30 @@ namespace MetricModeller {
             {
                 if(cbReusability.SelectedIndex == 0)
                 {
-                    //Bumps Portability up by 1
-                    listOfFactors[10] += 1;
+                    if(listOfFactors[10] != 5)
+                    {
+                        //Bumps Portability up by 1
+                        listOfFactors[10] += 1;
+                    }
 
-                    //Bumps Maintainability up by 1
-                    listOfFactors[11] += 1;
+                    if(listOfFactors[11] != 5)
+                    {
+                        //Bumps Maintainability up by 1
+                        listOfFactors[11] += 1;
+                    }
                 }
                 else
                 {
-                    listOfFactors[10] += (0.5 * cbReusability.SelectedIndex);
+                    if ((0.5 * cbReusability.SelectedIndex + listOfFactors[10]) < 5)
+                        listOfFactors[10] += (0.5 * cbReusability.SelectedIndex);
+                    else
+                        listOfFactors[10] = 5;
 
-                    listOfFactors[11] += (0.5 * cbReusability.SelectedIndex);
+                    if ((0.5 * cbReusability.SelectedIndex + listOfFactors[11]) < 5)
+                        listOfFactors[11] += (0.5 * cbReusability.SelectedIndex);
+
+                    else
+                        listOfFactors[11] = 5;
                 }
                 
 
@@ -145,7 +158,10 @@ namespace MetricModeller {
                     }
                     else
                     {
-                        listOfFactors[7] += (0.5 * cbReusability.SelectedIndex);
+                        if ((0.5 * cbReusability.SelectedIndex + listOfFactors[7]) < 5)
+                            listOfFactors[7] += (0.5 * cbReusability.SelectedIndex);
+                        else
+                            listOfFactors[7] = 5;
                     }
                     
                 }
