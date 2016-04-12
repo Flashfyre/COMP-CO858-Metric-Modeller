@@ -46,8 +46,8 @@ namespace MetricModeller {
             double effort;
             double duration;
 
-            salary = 32D;
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
+            salary = getSalaryForTeam(numOfPeople, 32D);
 
             languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
 
@@ -59,7 +59,7 @@ namespace MetricModeller {
 
             cost = calculateCost(effort, salary);
 
-            duration = calculateDuration(effort);
+            duration = getDurationForTeam(numOfPeople, calculateDuration(effort));
 
             MessageBox.Show(
                 "Function Points: " + functionPoints + "\n" + 
@@ -347,7 +347,7 @@ namespace MetricModeller {
 
         }
 
-        private void AddExperienceFactor(int numOfPeople, double salary, double duration)
+        private double getDurationForTeam(int numOfPeople, double duration)
         {
             int student_Entry_Factor_percent, intermediate_Expert_Factor_percent;
             if (chkExperienceFactor.Checked)
@@ -358,16 +358,34 @@ namespace MetricModeller {
                 int numberOfStudents = (numOfPeople * student_Entry_Factor_percent) / 100;
                 int numberOfExpert = (numOfPeople * intermediate_Expert_Factor_percent) / 100;
 
+                double studentDuration = (duration * 1.5 * student_Entry_Factor_percent / 100);
+                double expertDuration = (duration * 1 * intermediate_Expert_Factor_percent / 100);
+
+                double totalDuration = studentDuration + expertDuration;
+
+                return totalDuration;
+            }
+
+            return duration;
+        }
+
+        private double getSalaryForTeam(int numOfPeople, double salary) {
+            int student_Entry_Factor_percent, intermediate_Expert_Factor_percent;
+            if (chkExperienceFactor.Checked) {
+                int.TryParse(txtStudentsEntry.Text, out student_Entry_Factor_percent);
+                int.TryParse(txtIntermediateExpert.Text, out intermediate_Expert_Factor_percent);
+
+                int numberOfStudents = (numOfPeople * student_Entry_Factor_percent) / 100;
+                int numberOfExpert = (numOfPeople * intermediate_Expert_Factor_percent) / 100;
+
                 double studentSalary = (numberOfStudents * 24);
                 double expertSalary = (numberOfExpert * 32);
                 double averageSalary = (studentSalary + expertSalary) / numOfPeople;
 
-                double studentDuration = (duration * 1.5 * student_Entry_Factor_percent / 100);
-                double expertDuration = (duration * 1.5 * intermediate_Expert_Factor_percent / 100);
-
-                double totalDuration = studentDuration + expertDuration;
+                return averageSalary;
             }
 
+            return salary;
         }
 
 
