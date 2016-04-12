@@ -285,10 +285,10 @@ namespace MetricModeller {
         private double calculateDocDuration()
         {
            double pages = Convert.ToDouble(txtDocPages.Text);
-           double writers = 2;
+           double writers = Convert.ToInt32(txtWriters.Text); ;
 
            double dur = (pages * 3) / writers;
-            return dur/120;
+            return Math.Round(dur/120, 2);
         }
 
         private double calculateDocCost()
@@ -411,6 +411,7 @@ namespace MetricModeller {
             txtNumOfPeople.Text = "6";
             cbTeamCohesion.SelectedIndex = 0;
             txtDocPages.Text = "80";
+            txtWriters.Text = "4";
         }
         #endregion Samuel's Code
 

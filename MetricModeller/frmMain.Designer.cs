@@ -102,6 +102,8 @@
             this.lblHighTransactionRates = new System.Windows.Forms.Label();
             this.lblHeavyHardwareUsage = new System.Windows.Forms.Label();
             this.chkHistory = new System.Windows.Forms.CheckBox();
+            this.txtWriters = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.grbDoc.SuspendLayout();
             this.grbTeam.SuspendLayout();
             this.gbFramework.SuspendLayout();
@@ -113,38 +115,39 @@
             // lblFP
             // 
             this.lblFP.AutoSize = true;
-            this.lblFP.Location = new System.Drawing.Point(114, 736);
-            this.lblFP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFP.Location = new System.Drawing.Point(76, 478);
             this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(0, 20);
+            this.lblFP.Size = new System.Drawing.Size(0, 13);
             this.lblFP.TabIndex = 32;
             // 
             // grbDoc
             // 
+            this.grbDoc.Controls.Add(this.txtWriters);
+            this.grbDoc.Controls.Add(this.label6);
             this.grbDoc.Controls.Add(this.txtDocPages);
             this.grbDoc.Controls.Add(this.lblDocPages);
-            this.grbDoc.Location = new System.Drawing.Point(42, 552);
+            this.grbDoc.Location = new System.Drawing.Point(28, 353);
+            this.grbDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbDoc.Name = "grbDoc";
-            this.grbDoc.Size = new System.Drawing.Size(372, 66);
+            this.grbDoc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbDoc.Size = new System.Drawing.Size(248, 67);
             this.grbDoc.TabIndex = 148;
             this.grbDoc.TabStop = false;
             this.grbDoc.Text = "Documentation";
             // 
             // txtDocPages
             // 
-            this.txtDocPages.Location = new System.Drawing.Point(158, 27);
-            this.txtDocPages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDocPages.Location = new System.Drawing.Point(105, 18);
             this.txtDocPages.Name = "txtDocPages";
-            this.txtDocPages.Size = new System.Drawing.Size(68, 26);
+            this.txtDocPages.Size = new System.Drawing.Size(47, 20);
             this.txtDocPages.TabIndex = 66;
             // 
             // lblDocPages
             // 
             this.lblDocPages.AutoSize = true;
-            this.lblDocPages.Location = new System.Drawing.Point(60, 29);
-            this.lblDocPages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDocPages.Location = new System.Drawing.Point(40, 19);
             this.lblDocPages.Name = "lblDocPages";
-            this.lblDocPages.Size = new System.Drawing.Size(85, 20);
+            this.lblDocPages.Size = new System.Drawing.Size(59, 13);
             this.lblDocPages.TabIndex = 65;
             this.lblDocPages.Text = "# of Pages";
             // 
@@ -154,9 +157,11 @@
             this.grbTeam.Controls.Add(this.txtNumOfPeople);
             this.grbTeam.Controls.Add(this.label7);
             this.grbTeam.Controls.Add(this.cbTeamCohesion);
-            this.grbTeam.Location = new System.Drawing.Point(42, 444);
+            this.grbTeam.Location = new System.Drawing.Point(28, 283);
+            this.grbTeam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbTeam.Name = "grbTeam";
-            this.grbTeam.Size = new System.Drawing.Size(372, 101);
+            this.grbTeam.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbTeam.Size = new System.Drawing.Size(248, 66);
             this.grbTeam.TabIndex = 147;
             this.grbTeam.TabStop = false;
             this.grbTeam.Text = "Team Cohesion";
@@ -164,28 +169,25 @@
             // lblPeople
             // 
             this.lblPeople.AutoSize = true;
-            this.lblPeople.Location = new System.Drawing.Point(60, 28);
-            this.lblPeople.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPeople.Location = new System.Drawing.Point(40, 18);
             this.lblPeople.Name = "lblPeople";
-            this.lblPeople.Size = new System.Drawing.Size(89, 20);
+            this.lblPeople.Size = new System.Drawing.Size(62, 13);
             this.lblPeople.TabIndex = 5;
             this.lblPeople.Text = "# of People";
             // 
             // txtNumOfPeople
             // 
-            this.txtNumOfPeople.Location = new System.Drawing.Point(158, 25);
-            this.txtNumOfPeople.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumOfPeople.Location = new System.Drawing.Point(105, 16);
             this.txtNumOfPeople.Name = "txtNumOfPeople";
-            this.txtNumOfPeople.Size = new System.Drawing.Size(68, 26);
+            this.txtNumOfPeople.Size = new System.Drawing.Size(47, 20);
             this.txtNumOfPeople.TabIndex = 32;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 66);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(20, 43);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 20);
+            this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 65;
             this.label7.Text = "Team Cohesion";
             // 
@@ -197,10 +199,9 @@
             "No Past Experience",
             "Some Team Experience",
             "Experienced Team"});
-            this.cbTeamCohesion.Location = new System.Drawing.Point(158, 61);
-            this.cbTeamCohesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTeamCohesion.Location = new System.Drawing.Point(105, 40);
             this.cbTeamCohesion.Name = "cbTeamCohesion";
-            this.cbTeamCohesion.Size = new System.Drawing.Size(180, 28);
+            this.cbTeamCohesion.Size = new System.Drawing.Size(121, 21);
             this.cbTeamCohesion.TabIndex = 66;
             // 
             // cbInterfaces
@@ -211,10 +212,9 @@
             "Simple (5)",
             "Average (7)",
             "Complex (10)"});
-            this.cbInterfaces.Location = new System.Drawing.Point(299, 270);
-            this.cbInterfaces.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInterfaces.Location = new System.Drawing.Point(199, 175);
             this.cbInterfaces.Name = "cbInterfaces";
-            this.cbInterfaces.Size = new System.Drawing.Size(180, 28);
+            this.cbInterfaces.Size = new System.Drawing.Size(121, 21);
             this.cbInterfaces.TabIndex = 146;
             // 
             // cbMasterFiles
@@ -225,10 +225,9 @@
             "Simple (7)",
             "Average (10)",
             "Complex (15)"});
-            this.cbMasterFiles.Location = new System.Drawing.Point(299, 227);
-            this.cbMasterFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbMasterFiles.Location = new System.Drawing.Point(199, 148);
             this.cbMasterFiles.Name = "cbMasterFiles";
-            this.cbMasterFiles.Size = new System.Drawing.Size(180, 28);
+            this.cbMasterFiles.Size = new System.Drawing.Size(121, 21);
             this.cbMasterFiles.TabIndex = 145;
             // 
             // cbInquiry
@@ -239,10 +238,9 @@
             "Simple (3)",
             "Average (4)",
             "Complex (6)"});
-            this.cbInquiry.Location = new System.Drawing.Point(299, 180);
-            this.cbInquiry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInquiry.Location = new System.Drawing.Point(199, 117);
             this.cbInquiry.Name = "cbInquiry";
-            this.cbInquiry.Size = new System.Drawing.Size(180, 28);
+            this.cbInquiry.Size = new System.Drawing.Size(121, 21);
             this.cbInquiry.TabIndex = 144;
             // 
             // gbFramework
@@ -254,9 +252,11 @@
             this.gbFramework.Controls.Add(this.cbFramework);
             this.gbFramework.Controls.Add(this.label8);
             this.gbFramework.Controls.Add(this.trkFramework);
-            this.gbFramework.Location = new System.Drawing.Point(426, 447);
+            this.gbFramework.Location = new System.Drawing.Point(285, 283);
+            this.gbFramework.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFramework.Name = "gbFramework";
-            this.gbFramework.Size = new System.Drawing.Size(773, 171);
+            this.gbFramework.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFramework.Size = new System.Drawing.Size(515, 137);
             this.gbFramework.TabIndex = 126;
             this.gbFramework.TabStop = false;
             this.gbFramework.Text = "Framework Productivity";
@@ -264,10 +264,9 @@
             // lblFrameworkPercentageScale
             // 
             this.lblFrameworkPercentageScale.AutoSize = true;
-            this.lblFrameworkPercentageScale.Location = new System.Drawing.Point(350, 117);
-            this.lblFrameworkPercentageScale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFrameworkPercentageScale.Location = new System.Drawing.Point(237, 85);
             this.lblFrameworkPercentageScale.Name = "lblFrameworkPercentageScale";
-            this.lblFrameworkPercentageScale.Size = new System.Drawing.Size(414, 20);
+            this.lblFrameworkPercentageScale.Size = new System.Drawing.Size(283, 13);
             this.lblFrameworkPercentageScale.TabIndex = 73;
             this.lblFrameworkPercentageScale.Text = "+0%        +10%        +20%        +30%          +40%        +50%";
             this.lblFrameworkPercentageScale.Visible = false;
@@ -275,10 +274,9 @@
             // lblFrameworkPercentage
             // 
             this.lblFrameworkPercentage.AutoSize = true;
-            this.lblFrameworkPercentage.Location = new System.Drawing.Point(344, 33);
-            this.lblFrameworkPercentage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFrameworkPercentage.Location = new System.Drawing.Point(233, 30);
             this.lblFrameworkPercentage.Name = "lblFrameworkPercentage";
-            this.lblFrameworkPercentage.Size = new System.Drawing.Size(415, 40);
+            this.lblFrameworkPercentage.Size = new System.Drawing.Size(277, 26);
             this.lblFrameworkPercentage.TabIndex = 71;
             this.lblFrameworkPercentage.Text = "Percentage Increase\r\n(+50% means the framework multiplies productivity by 1.5)";
             this.lblFrameworkPercentage.Visible = false;
@@ -287,9 +285,10 @@
             // 
             this.chkFrameworkPercentage.AutoSize = true;
             this.chkFrameworkPercentage.Enabled = false;
-            this.chkFrameworkPercentage.Location = new System.Drawing.Point(180, 86);
+            this.chkFrameworkPercentage.Location = new System.Drawing.Point(124, 65);
+            this.chkFrameworkPercentage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFrameworkPercentage.Name = "chkFrameworkPercentage";
-            this.chkFrameworkPercentage.Size = new System.Drawing.Size(149, 24);
+            this.chkFrameworkPercentage.Size = new System.Drawing.Size(102, 17);
             this.chkFrameworkPercentage.TabIndex = 70;
             this.chkFrameworkPercentage.Text = "Use percentage";
             this.chkFrameworkPercentage.UseVisualStyleBackColor = true;
@@ -298,9 +297,10 @@
             // chkFramework
             // 
             this.chkFramework.AutoSize = true;
-            this.chkFramework.Location = new System.Drawing.Point(10, 66);
+            this.chkFramework.Location = new System.Drawing.Point(11, 52);
+            this.chkFramework.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFramework.Name = "chkFramework";
-            this.chkFramework.Size = new System.Drawing.Size(165, 44);
+            this.chkFramework.Size = new System.Drawing.Size(112, 30);
             this.chkFramework.TabIndex = 68;
             this.chkFramework.Text = "This project\r\nuses a Framework";
             this.chkFramework.UseVisualStyleBackColor = true;
@@ -317,27 +317,26 @@
             "(2) Significantly increases productivity (+21-30%)",
             "(3) Greatly increases productivity (+31-40%)",
             "(4) Increases productivity by as much as 50%"});
-            this.cbFramework.Location = new System.Drawing.Point(348, 43);
-            this.cbFramework.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbFramework.Location = new System.Drawing.Point(236, 37);
             this.cbFramework.Name = "cbFramework";
-            this.cbFramework.Size = new System.Drawing.Size(356, 28);
+            this.cbFramework.Size = new System.Drawing.Size(239, 21);
             this.cbFramework.TabIndex = 69;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(176, 47);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(121, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 20);
+            this.label8.Size = new System.Drawing.Size(108, 13);
             this.label8.TabIndex = 68;
             this.label8.Text = "Effect on Productivity";
             // 
             // trkFramework
             // 
-            this.trkFramework.Location = new System.Drawing.Point(338, 75);
+            this.trkFramework.Location = new System.Drawing.Point(229, 58);
+            this.trkFramework.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.trkFramework.Name = "trkFramework";
-            this.trkFramework.Size = new System.Drawing.Size(430, 69);
+            this.trkFramework.Size = new System.Drawing.Size(287, 45);
             this.trkFramework.TabIndex = 72;
             this.trkFramework.Visible = false;
             // 
@@ -349,10 +348,9 @@
             "Simple (4)",
             "Average (5)",
             "Complex (7)"});
-            this.cbOutput.Location = new System.Drawing.Point(299, 137);
-            this.cbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbOutput.Location = new System.Drawing.Point(199, 89);
             this.cbOutput.Name = "cbOutput";
-            this.cbOutput.Size = new System.Drawing.Size(180, 28);
+            this.cbOutput.Size = new System.Drawing.Size(121, 21);
             this.cbOutput.TabIndex = 143;
             // 
             // cbInput
@@ -363,109 +361,97 @@
             "Simple (3)",
             "Average (4)",
             "Complex (6)"});
-            this.cbInput.Location = new System.Drawing.Point(299, 97);
-            this.cbInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInput.Location = new System.Drawing.Point(199, 63);
             this.cbInput.Name = "cbInput";
-            this.cbInput.Size = new System.Drawing.Size(180, 28);
+            this.cbInput.Size = new System.Drawing.Size(121, 21);
             this.cbInput.TabIndex = 142;
             // 
             // txtInterfaces
             // 
-            this.txtInterfaces.Location = new System.Drawing.Point(141, 270);
-            this.txtInterfaces.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInterfaces.Location = new System.Drawing.Point(94, 175);
             this.txtInterfaces.Name = "txtInterfaces";
-            this.txtInterfaces.Size = new System.Drawing.Size(148, 26);
+            this.txtInterfaces.Size = new System.Drawing.Size(100, 20);
             this.txtInterfaces.TabIndex = 141;
             // 
             // txtMasterFiles
             // 
-            this.txtMasterFiles.Location = new System.Drawing.Point(141, 227);
-            this.txtMasterFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMasterFiles.Location = new System.Drawing.Point(94, 148);
             this.txtMasterFiles.Name = "txtMasterFiles";
-            this.txtMasterFiles.Size = new System.Drawing.Size(148, 26);
+            this.txtMasterFiles.Size = new System.Drawing.Size(100, 20);
             this.txtMasterFiles.TabIndex = 140;
             // 
             // txtInquiry
             // 
-            this.txtInquiry.Location = new System.Drawing.Point(141, 180);
-            this.txtInquiry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInquiry.Location = new System.Drawing.Point(94, 117);
             this.txtInquiry.Name = "txtInquiry";
-            this.txtInquiry.Size = new System.Drawing.Size(148, 26);
+            this.txtInquiry.Size = new System.Drawing.Size(100, 20);
             this.txtInquiry.TabIndex = 139;
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(141, 140);
-            this.txtOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOutput.Location = new System.Drawing.Point(94, 91);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(148, 26);
+            this.txtOutput.Size = new System.Drawing.Size(100, 20);
             this.txtOutput.TabIndex = 138;
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(141, 97);
-            this.txtInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInput.Location = new System.Drawing.Point(94, 63);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(148, 26);
+            this.txtInput.Size = new System.Drawing.Size(100, 20);
             this.txtInput.TabIndex = 137;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 274);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(34, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 136;
             this.label5.Text = "Interfaces";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 231);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(25, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 135;
             this.label4.Text = "Master Files";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 187);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(50, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 134;
             this.label3.Text = "Inquiry";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 144);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(49, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 133;
             this.label2.Text = "Output";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 104);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(57, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 132;
             this.label1.Text = "Input";
             // 
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(51, 40);
-            this.lblLanguage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLanguage.Location = new System.Drawing.Point(34, 26);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(81, 20);
+            this.lblLanguage.Size = new System.Drawing.Size(55, 13);
             this.lblLanguage.TabIndex = 131;
             this.lblLanguage.Text = "Language";
             // 
@@ -473,10 +459,9 @@
             // 
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLang.FormattingEnabled = true;
-            this.cbLang.Location = new System.Drawing.Point(141, 37);
-            this.cbLang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbLang.Location = new System.Drawing.Point(94, 24);
             this.cbLang.Name = "cbLang";
-            this.cbLang.Size = new System.Drawing.Size(180, 28);
+            this.cbLang.Size = new System.Drawing.Size(121, 21);
             this.cbLang.TabIndex = 130;
             // 
             // groupBox2
@@ -484,11 +469,9 @@
             this.groupBox2.Controls.Add(this.checkHighlyModular);
             this.groupBox2.Controls.Add(this.checkUnusedCode);
             this.groupBox2.Controls.Add(this.checkModuleTesting);
-            this.groupBox2.Location = new System.Drawing.Point(681, 314);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(454, 204);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(518, 114);
+            this.groupBox2.Size = new System.Drawing.Size(345, 74);
             this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reusability";
@@ -496,10 +479,9 @@
             // checkHighlyModular
             // 
             this.checkHighlyModular.AutoSize = true;
-            this.checkHighlyModular.Location = new System.Drawing.Point(16, 48);
-            this.checkHighlyModular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkHighlyModular.Location = new System.Drawing.Point(11, 31);
             this.checkHighlyModular.Name = "checkHighlyModular";
-            this.checkHighlyModular.Size = new System.Drawing.Size(139, 24);
+            this.checkHighlyModular.Size = new System.Drawing.Size(96, 17);
             this.checkHighlyModular.TabIndex = 8;
             this.checkHighlyModular.Text = "Highly Modular";
             this.checkHighlyModular.UseVisualStyleBackColor = true;
@@ -508,10 +490,9 @@
             // checkUnusedCode
             // 
             this.checkUnusedCode.AutoSize = true;
-            this.checkUnusedCode.Location = new System.Drawing.Point(225, 68);
-            this.checkUnusedCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkUnusedCode.Location = new System.Drawing.Point(150, 44);
             this.checkUnusedCode.Name = "checkUnusedCode";
-            this.checkUnusedCode.Size = new System.Drawing.Size(211, 24);
+            this.checkUnusedCode.Size = new System.Drawing.Size(146, 17);
             this.checkUnusedCode.TabIndex = 74;
             this.checkUnusedCode.Text = "Will contain unused code";
             this.checkUnusedCode.UseVisualStyleBackColor = true;
@@ -520,10 +501,9 @@
             // checkModuleTesting
             // 
             this.checkModuleTesting.AutoSize = true;
-            this.checkModuleTesting.Location = new System.Drawing.Point(225, 29);
-            this.checkModuleTesting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkModuleTesting.Location = new System.Drawing.Point(150, 19);
             this.checkModuleTesting.Name = "checkModuleTesting";
-            this.checkModuleTesting.Size = new System.Drawing.Size(143, 24);
+            this.checkModuleTesting.Size = new System.Drawing.Size(99, 17);
             this.checkModuleTesting.TabIndex = 73;
             this.checkModuleTesting.Text = "Module Testing";
             this.checkModuleTesting.UseVisualStyleBackColor = true;
@@ -538,11 +518,9 @@
             this.groupBox1.Controls.Add(this.txtStudentsEntry);
             this.groupBox1.Controls.Add(this.txtIntermediateExpert);
             this.groupBox1.Controls.Add(this.chkExperienceFactor);
-            this.groupBox1.Location = new System.Drawing.Point(41, 314);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(27, 204);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(621, 114);
+            this.groupBox1.Size = new System.Drawing.Size(414, 74);
             this.groupBox1.TabIndex = 128;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Experience Factor";
@@ -550,10 +528,9 @@
             // lblPercent2
             // 
             this.lblPercent2.AutoSize = true;
-            this.lblPercent2.Location = new System.Drawing.Point(588, 74);
-            this.lblPercent2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPercent2.Location = new System.Drawing.Point(392, 48);
             this.lblPercent2.Name = "lblPercent2";
-            this.lblPercent2.Size = new System.Drawing.Size(23, 20);
+            this.lblPercent2.Size = new System.Drawing.Size(15, 13);
             this.lblPercent2.TabIndex = 6;
             this.lblPercent2.Text = "%";
             this.lblPercent2.Visible = false;
@@ -561,10 +538,9 @@
             // lblPercent1
             // 
             this.lblPercent1.AutoSize = true;
-            this.lblPercent1.Location = new System.Drawing.Point(588, 25);
-            this.lblPercent1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPercent1.Location = new System.Drawing.Point(392, 16);
             this.lblPercent1.Name = "lblPercent1";
-            this.lblPercent1.Size = new System.Drawing.Size(23, 20);
+            this.lblPercent1.Size = new System.Drawing.Size(15, 13);
             this.lblPercent1.TabIndex = 5;
             this.lblPercent1.Text = "%";
             this.lblPercent1.Visible = false;
@@ -572,10 +548,9 @@
             // lblIntermediateExpert
             // 
             this.lblIntermediateExpert.AutoSize = true;
-            this.lblIntermediateExpert.Location = new System.Drawing.Point(226, 74);
-            this.lblIntermediateExpert.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIntermediateExpert.Location = new System.Drawing.Point(151, 48);
             this.lblIntermediateExpert.Name = "lblIntermediateExpert";
-            this.lblIntermediateExpert.Size = new System.Drawing.Size(184, 20);
+            this.lblIntermediateExpert.Size = new System.Drawing.Size(122, 13);
             this.lblIntermediateExpert.TabIndex = 4;
             this.lblIntermediateExpert.Text = "Intermediate and Expert:";
             this.lblIntermediateExpert.Visible = false;
@@ -583,39 +558,35 @@
             // lblStudentsEntry
             // 
             this.lblStudentsEntry.AutoSize = true;
-            this.lblStudentsEntry.Location = new System.Drawing.Point(226, 26);
-            this.lblStudentsEntry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStudentsEntry.Location = new System.Drawing.Point(151, 17);
             this.lblStudentsEntry.Name = "lblStudentsEntry";
-            this.lblStudentsEntry.Size = new System.Drawing.Size(191, 20);
+            this.lblStudentsEntry.Size = new System.Drawing.Size(129, 13);
             this.lblStudentsEntry.TabIndex = 3;
             this.lblStudentsEntry.Text = "Students and Entry Level:";
             this.lblStudentsEntry.Visible = false;
             // 
             // txtStudentsEntry
             // 
-            this.txtStudentsEntry.Location = new System.Drawing.Point(432, 23);
-            this.txtStudentsEntry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStudentsEntry.Location = new System.Drawing.Point(288, 15);
             this.txtStudentsEntry.Name = "txtStudentsEntry";
-            this.txtStudentsEntry.Size = new System.Drawing.Size(148, 26);
+            this.txtStudentsEntry.Size = new System.Drawing.Size(100, 20);
             this.txtStudentsEntry.TabIndex = 2;
             this.txtStudentsEntry.Visible = false;
             // 
             // txtIntermediateExpert
             // 
-            this.txtIntermediateExpert.Location = new System.Drawing.Point(432, 71);
-            this.txtIntermediateExpert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIntermediateExpert.Location = new System.Drawing.Point(288, 46);
             this.txtIntermediateExpert.Name = "txtIntermediateExpert";
-            this.txtIntermediateExpert.Size = new System.Drawing.Size(148, 26);
+            this.txtIntermediateExpert.Size = new System.Drawing.Size(100, 20);
             this.txtIntermediateExpert.TabIndex = 1;
             this.txtIntermediateExpert.Visible = false;
             // 
             // chkExperienceFactor
             // 
             this.chkExperienceFactor.AutoSize = true;
-            this.chkExperienceFactor.Location = new System.Drawing.Point(16, 48);
-            this.chkExperienceFactor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkExperienceFactor.Location = new System.Drawing.Point(11, 31);
             this.chkExperienceFactor.Name = "chkExperienceFactor";
-            this.chkExperienceFactor.Size = new System.Drawing.Size(201, 24);
+            this.chkExperienceFactor.Size = new System.Drawing.Size(137, 17);
             this.chkExperienceFactor.TabIndex = 0;
             this.chkExperienceFactor.Text = "Select Multi-Experience";
             this.chkExperienceFactor.UseVisualStyleBackColor = true;
@@ -623,9 +594,10 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(1037, 33);
+            this.btnTest.Location = new System.Drawing.Point(691, 21);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(160, 37);
+            this.btnTest.Size = new System.Drawing.Size(107, 24);
             this.btnTest.TabIndex = 127;
             this.btnTest.Text = "Fill with Test Data";
             this.btnTest.UseVisualStyleBackColor = true;
@@ -633,10 +605,9 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(1063, 638);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCalculate.Location = new System.Drawing.Point(710, 426);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(136, 52);
+            this.btnCalculate.Size = new System.Drawing.Size(91, 25);
             this.btnCalculate.TabIndex = 95;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -645,10 +616,9 @@
             // lblComplexity
             // 
             this.lblComplexity.AutoSize = true;
-            this.lblComplexity.Location = new System.Drawing.Point(342, 41);
-            this.lblComplexity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComplexity.Location = new System.Drawing.Point(228, 27);
             this.lblComplexity.Name = "lblComplexity";
-            this.lblComplexity.Size = new System.Drawing.Size(138, 20);
+            this.lblComplexity.Size = new System.Drawing.Size(93, 13);
             this.lblComplexity.TabIndex = 125;
             this.lblComplexity.Text = "Project Complexity";
             // 
@@ -660,10 +630,9 @@
             "Organic",
             "Semi-detached",
             "Embedded"});
-            this.cbComplexity.Location = new System.Drawing.Point(491, 38);
-            this.cbComplexity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbComplexity.Location = new System.Drawing.Point(327, 25);
             this.cbComplexity.Name = "cbComplexity";
-            this.cbComplexity.Size = new System.Drawing.Size(165, 28);
+            this.cbComplexity.Size = new System.Drawing.Size(111, 21);
             this.cbComplexity.TabIndex = 124;
             // 
             // cbReusability
@@ -677,10 +646,9 @@
             "3",
             "4",
             "5"});
-            this.cbReusability.Location = new System.Drawing.Point(1127, 153);
-            this.cbReusability.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbReusability.Location = new System.Drawing.Point(751, 99);
             this.cbReusability.Name = "cbReusability";
-            this.cbReusability.Size = new System.Drawing.Size(68, 28);
+            this.cbReusability.Size = new System.Drawing.Size(47, 21);
             this.cbReusability.TabIndex = 123;
             // 
             // cbPortability
@@ -694,10 +662,9 @@
             "3",
             "4",
             "5"});
-            this.cbPortability.Location = new System.Drawing.Point(631, 180);
-            this.cbPortability.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPortability.Location = new System.Drawing.Point(421, 117);
             this.cbPortability.Name = "cbPortability";
-            this.cbPortability.Size = new System.Drawing.Size(68, 28);
+            this.cbPortability.Size = new System.Drawing.Size(47, 21);
             this.cbPortability.TabIndex = 120;
             // 
             // cbEndUserEfficiency
@@ -711,19 +678,17 @@
             "3",
             "4",
             "5"});
-            this.cbEndUserEfficiency.Location = new System.Drawing.Point(879, 225);
-            this.cbEndUserEfficiency.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbEndUserEfficiency.Location = new System.Drawing.Point(586, 146);
             this.cbEndUserEfficiency.Name = "cbEndUserEfficiency";
-            this.cbEndUserEfficiency.Size = new System.Drawing.Size(68, 28);
+            this.cbEndUserEfficiency.Size = new System.Drawing.Size(47, 21);
             this.cbEndUserEfficiency.TabIndex = 122;
             // 
             // lblPortability
             // 
             this.lblPortability.AutoSize = true;
-            this.lblPortability.Location = new System.Drawing.Point(545, 185);
-            this.lblPortability.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPortability.Location = new System.Drawing.Point(363, 120);
             this.lblPortability.Name = "lblPortability";
-            this.lblPortability.Size = new System.Drawing.Size(77, 20);
+            this.lblPortability.Size = new System.Drawing.Size(52, 13);
             this.lblPortability.TabIndex = 116;
             this.lblPortability.Text = "Portability";
             // 
@@ -738,39 +703,35 @@
             "3",
             "4",
             "5"});
-            this.cbMaintainability.Location = new System.Drawing.Point(879, 100);
-            this.cbMaintainability.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbMaintainability.Location = new System.Drawing.Point(586, 65);
             this.cbMaintainability.Name = "cbMaintainability";
-            this.cbMaintainability.Size = new System.Drawing.Size(68, 28);
+            this.cbMaintainability.Size = new System.Drawing.Size(47, 21);
             this.cbMaintainability.TabIndex = 121;
             // 
             // lblMaintainability
             // 
             this.lblMaintainability.AutoSize = true;
-            this.lblMaintainability.Location = new System.Drawing.Point(760, 105);
-            this.lblMaintainability.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaintainability.Location = new System.Drawing.Point(507, 68);
             this.lblMaintainability.Name = "lblMaintainability";
-            this.lblMaintainability.Size = new System.Drawing.Size(108, 20);
+            this.lblMaintainability.Size = new System.Drawing.Size(73, 13);
             this.lblMaintainability.TabIndex = 117;
             this.lblMaintainability.Text = "Maintainability";
             // 
             // lblEndUserEfficiency
             // 
             this.lblEndUserEfficiency.AutoSize = true;
-            this.lblEndUserEfficiency.Location = new System.Drawing.Point(721, 227);
-            this.lblEndUserEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEndUserEfficiency.Location = new System.Drawing.Point(481, 148);
             this.lblEndUserEfficiency.Name = "lblEndUserEfficiency";
-            this.lblEndUserEfficiency.Size = new System.Drawing.Size(146, 20);
+            this.lblEndUserEfficiency.Size = new System.Drawing.Size(98, 13);
             this.lblEndUserEfficiency.TabIndex = 118;
             this.lblEndUserEfficiency.Text = "End-user Efficiency";
             // 
             // lblReusability
             // 
             this.lblReusability.AutoSize = true;
-            this.lblReusability.Location = new System.Drawing.Point(1023, 157);
-            this.lblReusability.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReusability.Location = new System.Drawing.Point(682, 102);
             this.lblReusability.Name = "lblReusability";
-            this.lblReusability.Size = new System.Drawing.Size(86, 20);
+            this.lblReusability.Size = new System.Drawing.Size(58, 13);
             this.lblReusability.TabIndex = 119;
             this.lblReusability.Text = "Reusability";
             // 
@@ -785,10 +746,9 @@
             "3",
             "4",
             "5"});
-            this.cbEaseOfOperation.Location = new System.Drawing.Point(1127, 269);
-            this.cbEaseOfOperation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbEaseOfOperation.Location = new System.Drawing.Point(751, 175);
             this.cbEaseOfOperation.Name = "cbEaseOfOperation";
-            this.cbEaseOfOperation.Size = new System.Drawing.Size(68, 28);
+            this.cbEaseOfOperation.Size = new System.Drawing.Size(47, 21);
             this.cbEaseOfOperation.TabIndex = 115;
             // 
             // cbEaseOfInstallation
@@ -802,10 +762,9 @@
             "3",
             "4",
             "5"});
-            this.cbEaseOfInstallation.Location = new System.Drawing.Point(1127, 100);
-            this.cbEaseOfInstallation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbEaseOfInstallation.Location = new System.Drawing.Point(751, 65);
             this.cbEaseOfInstallation.Name = "cbEaseOfInstallation";
-            this.cbEaseOfInstallation.Size = new System.Drawing.Size(68, 28);
+            this.cbEaseOfInstallation.Size = new System.Drawing.Size(47, 21);
             this.cbEaseOfInstallation.TabIndex = 114;
             // 
             // cbOnlineDataEntry
@@ -819,10 +778,9 @@
             "3",
             "4",
             "5"});
-            this.cbOnlineDataEntry.Location = new System.Drawing.Point(631, 140);
-            this.cbOnlineDataEntry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbOnlineDataEntry.Location = new System.Drawing.Point(421, 91);
             this.cbOnlineDataEntry.Name = "cbOnlineDataEntry";
-            this.cbOnlineDataEntry.Size = new System.Drawing.Size(68, 28);
+            this.cbOnlineDataEntry.Size = new System.Drawing.Size(47, 21);
             this.cbOnlineDataEntry.TabIndex = 111;
             // 
             // cbComplexComputations
@@ -836,19 +794,17 @@
             "3",
             "4",
             "5"});
-            this.cbComplexComputations.Location = new System.Drawing.Point(879, 180);
-            this.cbComplexComputations.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbComplexComputations.Location = new System.Drawing.Point(586, 117);
             this.cbComplexComputations.Name = "cbComplexComputations";
-            this.cbComplexComputations.Size = new System.Drawing.Size(68, 28);
+            this.cbComplexComputations.Size = new System.Drawing.Size(47, 21);
             this.cbComplexComputations.TabIndex = 113;
             // 
             // lblOnlineDataEntry
             // 
             this.lblOnlineDataEntry.AutoSize = true;
-            this.lblOnlineDataEntry.Location = new System.Drawing.Point(489, 147);
-            this.lblOnlineDataEntry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOnlineDataEntry.Location = new System.Drawing.Point(326, 96);
             this.lblOnlineDataEntry.Name = "lblOnlineDataEntry";
-            this.lblOnlineDataEntry.Size = new System.Drawing.Size(134, 20);
+            this.lblOnlineDataEntry.Size = new System.Drawing.Size(90, 13);
             this.lblOnlineDataEntry.TabIndex = 106;
             this.lblOnlineDataEntry.Text = "Online Data Entry";
             // 
@@ -863,29 +819,26 @@
             "3",
             "4",
             "5"});
-            this.cbOnlineUpdating.Location = new System.Drawing.Point(631, 270);
-            this.cbOnlineUpdating.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbOnlineUpdating.Location = new System.Drawing.Point(421, 175);
             this.cbOnlineUpdating.Name = "cbOnlineUpdating";
-            this.cbOnlineUpdating.Size = new System.Drawing.Size(68, 28);
+            this.cbOnlineUpdating.Size = new System.Drawing.Size(47, 21);
             this.cbOnlineUpdating.TabIndex = 112;
             // 
             // lblOnlineUpdating
             // 
             this.lblOnlineUpdating.AutoSize = true;
-            this.lblOnlineUpdating.Location = new System.Drawing.Point(501, 271);
-            this.lblOnlineUpdating.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOnlineUpdating.Location = new System.Drawing.Point(334, 176);
             this.lblOnlineUpdating.Name = "lblOnlineUpdating";
-            this.lblOnlineUpdating.Size = new System.Drawing.Size(123, 20);
+            this.lblOnlineUpdating.Size = new System.Drawing.Size(83, 13);
             this.lblOnlineUpdating.TabIndex = 107;
             this.lblOnlineUpdating.Text = "Online Updating";
             // 
             // lblComplexComputations
             // 
             this.lblComplexComputations.AutoSize = true;
-            this.lblComplexComputations.Location = new System.Drawing.Point(759, 173);
-            this.lblComplexComputations.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComplexComputations.Location = new System.Drawing.Point(506, 112);
             this.lblComplexComputations.Name = "lblComplexComputations";
-            this.lblComplexComputations.Size = new System.Drawing.Size(108, 40);
+            this.lblComplexComputations.Size = new System.Drawing.Size(71, 26);
             this.lblComplexComputations.TabIndex = 108;
             this.lblComplexComputations.Text = "Complex\r\nComputations";
             this.lblComplexComputations.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -893,20 +846,18 @@
             // lblEaseOfOperation
             // 
             this.lblEaseOfOperation.AutoSize = true;
-            this.lblEaseOfOperation.Location = new System.Drawing.Point(970, 273);
-            this.lblEaseOfOperation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEaseOfOperation.Location = new System.Drawing.Point(647, 177);
             this.lblEaseOfOperation.Name = "lblEaseOfOperation";
-            this.lblEaseOfOperation.Size = new System.Drawing.Size(138, 20);
+            this.lblEaseOfOperation.Size = new System.Drawing.Size(92, 13);
             this.lblEaseOfOperation.TabIndex = 110;
             this.lblEaseOfOperation.Text = "Ease of Operation";
             // 
             // lblEaseOfInstallation
             // 
             this.lblEaseOfInstallation.AutoSize = true;
-            this.lblEaseOfInstallation.Location = new System.Drawing.Point(963, 100);
-            this.lblEaseOfInstallation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEaseOfInstallation.Location = new System.Drawing.Point(642, 65);
             this.lblEaseOfInstallation.Name = "lblEaseOfInstallation";
-            this.lblEaseOfInstallation.Size = new System.Drawing.Size(145, 20);
+            this.lblEaseOfInstallation.Size = new System.Drawing.Size(96, 13);
             this.lblEaseOfInstallation.TabIndex = 109;
             this.lblEaseOfInstallation.Text = "Ease of Installation";
             // 
@@ -921,10 +872,9 @@
             "3",
             "4",
             "5"});
-            this.cbHighTransactionRates.Location = new System.Drawing.Point(1128, 211);
-            this.cbHighTransactionRates.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbHighTransactionRates.Location = new System.Drawing.Point(752, 137);
             this.cbHighTransactionRates.Name = "cbHighTransactionRates";
-            this.cbHighTransactionRates.Size = new System.Drawing.Size(68, 28);
+            this.cbHighTransactionRates.Size = new System.Drawing.Size(47, 21);
             this.cbHighTransactionRates.TabIndex = 105;
             // 
             // cbHeavyHardwareUsage
@@ -938,10 +888,9 @@
             "3",
             "4",
             "5"});
-            this.cbHeavyHardwareUsage.Location = new System.Drawing.Point(879, 270);
-            this.cbHeavyHardwareUsage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbHeavyHardwareUsage.Location = new System.Drawing.Point(586, 175);
             this.cbHeavyHardwareUsage.Name = "cbHeavyHardwareUsage";
-            this.cbHeavyHardwareUsage.Size = new System.Drawing.Size(68, 28);
+            this.cbHeavyHardwareUsage.Size = new System.Drawing.Size(47, 21);
             this.cbHeavyHardwareUsage.TabIndex = 104;
             // 
             // cbDataComm
@@ -955,10 +904,9 @@
             "3",
             "4",
             "5"});
-            this.cbDataComm.Location = new System.Drawing.Point(631, 100);
-            this.cbDataComm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDataComm.Location = new System.Drawing.Point(421, 65);
             this.cbDataComm.Name = "cbDataComm";
-            this.cbDataComm.Size = new System.Drawing.Size(68, 28);
+            this.cbDataComm.Size = new System.Drawing.Size(47, 21);
             this.cbDataComm.TabIndex = 101;
             // 
             // cbPerformanceCriteria
@@ -972,19 +920,17 @@
             "3",
             "4",
             "5"});
-            this.cbPerformanceCriteria.Location = new System.Drawing.Point(879, 140);
-            this.cbPerformanceCriteria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPerformanceCriteria.Location = new System.Drawing.Point(586, 91);
             this.cbPerformanceCriteria.Name = "cbPerformanceCriteria";
-            this.cbPerformanceCriteria.Size = new System.Drawing.Size(68, 28);
+            this.cbPerformanceCriteria.Size = new System.Drawing.Size(47, 21);
             this.cbPerformanceCriteria.TabIndex = 103;
             // 
             // lblDataCommunications
             // 
             this.lblDataCommunications.AutoSize = true;
-            this.lblDataCommunications.Location = new System.Drawing.Point(496, 90);
-            this.lblDataCommunications.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDataCommunications.Location = new System.Drawing.Point(331, 58);
             this.lblDataCommunications.Name = "lblDataCommunications";
-            this.lblDataCommunications.Size = new System.Drawing.Size(127, 40);
+            this.lblDataCommunications.Size = new System.Drawing.Size(84, 26);
             this.lblDataCommunications.TabIndex = 96;
             this.lblDataCommunications.Text = "Data\r\nCommunications";
             this.lblDataCommunications.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1000,29 +946,26 @@
             "3",
             "4",
             "5"});
-            this.cbDistributedData.Location = new System.Drawing.Point(631, 225);
-            this.cbDistributedData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDistributedData.Location = new System.Drawing.Point(421, 146);
             this.cbDistributedData.Name = "cbDistributedData";
-            this.cbDistributedData.Size = new System.Drawing.Size(68, 28);
+            this.cbDistributedData.Size = new System.Drawing.Size(47, 21);
             this.cbDistributedData.TabIndex = 102;
             // 
             // lblDistributedData
             // 
             this.lblDistributedData.AutoSize = true;
-            this.lblDistributedData.Location = new System.Drawing.Point(497, 228);
-            this.lblDistributedData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDistributedData.Location = new System.Drawing.Point(331, 148);
             this.lblDistributedData.Name = "lblDistributedData";
-            this.lblDistributedData.Size = new System.Drawing.Size(125, 20);
+            this.lblDistributedData.Size = new System.Drawing.Size(83, 13);
             this.lblDistributedData.TabIndex = 97;
             this.lblDistributedData.Text = "Distributed Data";
             // 
             // lblPerformanceCriteria
             // 
             this.lblPerformanceCriteria.AutoSize = true;
-            this.lblPerformanceCriteria.Location = new System.Drawing.Point(717, 144);
-            this.lblPerformanceCriteria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerformanceCriteria.Location = new System.Drawing.Point(478, 94);
             this.lblPerformanceCriteria.Name = "lblPerformanceCriteria";
-            this.lblPerformanceCriteria.Size = new System.Drawing.Size(154, 20);
+            this.lblPerformanceCriteria.Size = new System.Drawing.Size(102, 13);
             this.lblPerformanceCriteria.TabIndex = 98;
             this.lblPerformanceCriteria.Text = "Performance Criteria";
             this.lblPerformanceCriteria.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1030,10 +973,9 @@
             // lblHighTransactionRates
             // 
             this.lblHighTransactionRates.AutoSize = true;
-            this.lblHighTransactionRates.Location = new System.Drawing.Point(979, 203);
-            this.lblHighTransactionRates.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHighTransactionRates.Location = new System.Drawing.Point(653, 132);
             this.lblHighTransactionRates.Name = "lblHighTransactionRates";
-            this.lblHighTransactionRates.Size = new System.Drawing.Size(129, 40);
+            this.lblHighTransactionRates.Size = new System.Drawing.Size(88, 26);
             this.lblHighTransactionRates.TabIndex = 100;
             this.lblHighTransactionRates.Text = "High Transaction\r\nRates";
             this.lblHighTransactionRates.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1041,10 +983,9 @@
             // lblHeavyHardwareUsage
             // 
             this.lblHeavyHardwareUsage.AutoSize = true;
-            this.lblHeavyHardwareUsage.Location = new System.Drawing.Point(739, 257);
-            this.lblHeavyHardwareUsage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeavyHardwareUsage.Location = new System.Drawing.Point(493, 167);
             this.lblHeavyHardwareUsage.Name = "lblHeavyHardwareUsage";
-            this.lblHeavyHardwareUsage.Size = new System.Drawing.Size(126, 40);
+            this.lblHeavyHardwareUsage.Size = new System.Drawing.Size(87, 26);
             this.lblHeavyHardwareUsage.TabIndex = 99;
             this.lblHeavyHardwareUsage.Text = "Heavy Hardware\r\n Usage";
             this.lblHeavyHardwareUsage.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1052,18 +993,35 @@
             // chkHistory
             // 
             this.chkHistory.AutoSize = true;
-            this.chkHistory.Location = new System.Drawing.Point(834, 653);
+            this.chkHistory.Location = new System.Drawing.Point(557, 431);
+            this.chkHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkHistory.Name = "chkHistory";
-            this.chkHistory.Size = new System.Drawing.Size(215, 24);
+            this.chkHistory.Size = new System.Drawing.Size(146, 17);
             this.chkHistory.TabIndex = 149;
             this.chkHistory.Text = "Calculate with History File";
             this.chkHistory.UseVisualStyleBackColor = true;
             // 
+            // txtWriters
+            // 
+            this.txtWriters.Location = new System.Drawing.Point(105, 42);
+            this.txtWriters.Name = "txtWriters";
+            this.txtWriters.Size = new System.Drawing.Size(47, 20);
+            this.txtWriters.TabIndex = 68;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "# of Tech Writers";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 712);
+            this.ClientSize = new System.Drawing.Size(839, 463);
             this.Controls.Add(this.chkHistory);
             this.Controls.Add(this.grbDoc);
             this.Controls.Add(this.grbTeam);
@@ -1120,6 +1078,7 @@
             this.Controls.Add(this.lblHighTransactionRates);
             this.Controls.Add(this.lblHeavyHardwareUsage);
             this.Controls.Add(this.lblFP);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.Text = "Metric Modeller";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -1220,6 +1179,8 @@
         private System.Windows.Forms.Label lblHighTransactionRates;
         private System.Windows.Forms.Label lblHeavyHardwareUsage;
         private System.Windows.Forms.CheckBox chkHistory;
+        private System.Windows.Forms.TextBox txtWriters;
+        private System.Windows.Forms.Label label6;
 
     }
 }
