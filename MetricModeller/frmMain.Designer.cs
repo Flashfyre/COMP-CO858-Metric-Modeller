@@ -135,7 +135,7 @@
             // lblFrameworkPercentageScale
             // 
             this.lblFrameworkPercentageScale.AutoSize = true;
-            this.lblFrameworkPercentageScale.Location = new System.Drawing.Point(349, 103);
+            this.lblFrameworkPercentageScale.Location = new System.Drawing.Point(349, 101);
             this.lblFrameworkPercentageScale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrameworkPercentageScale.Name = "lblFrameworkPercentageScale";
             this.lblFrameworkPercentageScale.Size = new System.Drawing.Size(414, 20);
@@ -169,7 +169,7 @@
             // chkFramework
             // 
             this.chkFramework.AutoSize = true;
-            this.chkFramework.Location = new System.Drawing.Point(10, 47);
+            this.chkFramework.Location = new System.Drawing.Point(11, 47);
             this.chkFramework.Name = "chkFramework";
             this.chkFramework.Size = new System.Drawing.Size(165, 44);
             this.chkFramework.TabIndex = 68;
@@ -207,7 +207,7 @@
             // 
             // trkFramework
             // 
-            this.trkFramework.Location = new System.Drawing.Point(338, 63);
+            this.trkFramework.Location = new System.Drawing.Point(338, 60);
             this.trkFramework.Name = "trkFramework";
             this.trkFramework.Size = new System.Drawing.Size(430, 69);
             this.trkFramework.TabIndex = 72;
@@ -232,7 +232,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(540, 114);
+            this.groupBox2.Size = new System.Drawing.Size(517, 114);
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resuability";
@@ -252,7 +252,7 @@
             // checkUnusedCode
             // 
             this.checkUnusedCode.AutoSize = true;
-            this.checkUnusedCode.Location = new System.Drawing.Point(312, 48);
+            this.checkUnusedCode.Location = new System.Drawing.Point(225, 68);
             this.checkUnusedCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkUnusedCode.Name = "checkUnusedCode";
             this.checkUnusedCode.Size = new System.Drawing.Size(211, 24);
@@ -264,7 +264,7 @@
             // checkModuleTesting
             // 
             this.checkModuleTesting.AutoSize = true;
-            this.checkModuleTesting.Location = new System.Drawing.Point(164, 48);
+            this.checkModuleTesting.Location = new System.Drawing.Point(225, 30);
             this.checkModuleTesting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkModuleTesting.Name = "checkModuleTesting";
             this.checkModuleTesting.Size = new System.Drawing.Size(143, 24);
