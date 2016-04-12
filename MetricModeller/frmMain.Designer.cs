@@ -362,6 +362,7 @@
             this.grbDoc.Margin = new System.Windows.Forms.Padding(2);
             this.grbDoc.Name = "grbDoc";
             this.grbDoc.Padding = new System.Windows.Forms.Padding(2);
+            this.grbDoc.Size = new System.Drawing.Size(248, 61);
             this.grbDoc.TabIndex = 94;
             this.grbDoc.TabStop = false;
             this.grbDoc.Text = "Documentation";
@@ -666,6 +667,7 @@
             // 
             // btnCalculate
             // 
+            this.btnCalculate.Location = new System.Drawing.Point(655, 405);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(91, 34);
             this.btnCalculate.TabIndex = 20;
