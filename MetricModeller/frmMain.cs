@@ -67,10 +67,13 @@ namespace MetricModeller {
 
             duration = calculateDuration(effort);
 
-            Debug.WriteLine("Function Points: " + functionPoints);
-            Debug.WriteLine("Total Lines: " + totalLines);
-            Debug.WriteLine("Man Months: " + manMonths);
-            Debug.WriteLine("Cost: $" + cost);
+            MessageBox.Show(
+                "Function Points: " + functionPoints + "\n" + 
+                "Total Lines: " + totalLines + "\n" +
+                "Cost: " + cost + "\n" +
+                "Effort: " + effort + "\n" +
+                "Duration: " + duration + "\n"
+                );
         }
 
         private double calculateEffort(int totalLines)
@@ -103,7 +106,7 @@ namespace MetricModeller {
 
         private double calculateTCF()
         {
-            int[] listOfFactors = new int[]
+            double[] listOfFactors = new double[]
             {
                 cbDataComm.SelectedIndex,
                 cbDistributedData.SelectedIndex,
@@ -121,6 +124,53 @@ namespace MetricModeller {
                 cbReusability.SelectedIndex
             };
 
+            if (checkHighlyModular.Checked)
+            {
+                if(cbReusability.SelectedIndex == 0)
+                {
+                    //Bumps Portability up by 1
+                    listOfFactors[10] += 1;
+
+                    //Bumps Maintainability up by 1
+                    listOfFactors[11] += 1;
+                }
+                else
+                {
+                    listOfFactors[10] += (0.5 * cbReusability.SelectedIndex);
+
+                    listOfFactors[11] += (0.5 * cbReusability.SelectedIndex);
+                }
+                
+
+                if (checkUnusedCode.Checked)
+                {
+                    if(cbReusability.SelectedIndex == 0)
+                    {
+                        //Bumps Complex Computations up by 1
+                        listOfFactors[7] += 1;
+                    }
+                    else
+                    {
+                        listOfFactors[7] += (0.5 * cbReusability.SelectedIndex);
+                    }
+                    
+                }
+
+                if (checkModuleTesting.Checked)
+                {
+                    if(cbReusability.SelectedIndex == 0)
+                    {
+                        listOfFactors[11] += 1;
+                    }
+                    else
+                    {
+                        //Bumps Maintainability up again by 1
+                        listOfFactors[11] += 1 * (0.5 * cbReusability.SelectedIndex);
+                    }
+                    
+                }
+            }
+                
             double sum = 0;
 
             foreach (int i in listOfFactors)
@@ -147,7 +197,7 @@ namespace MetricModeller {
             wInquiry = weightingFactors[2][cbInquiry.SelectedIndex];
             wMasterFiles = weightingFactors[3][cbMasterFiles.SelectedIndex];
             wInterfaces = weightingFactors[4][cbInterfaces.SelectedIndex];
-
+            
             return (input * wInput) + (output * wOutput) + (inquiry * wInquiry) + (masterFiles * wMasterFiles) + (interfaces * wInterfaces);
         }
         private double calculateTeamCohesion(int numOfPeople)
@@ -298,6 +348,20 @@ namespace MetricModeller {
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkHighlyModular_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkHighlyModular.Checked)
+            {
+                checkModuleTesting.Visible = true;
+                checkUnusedCode.Visible = true;
+            }
+            else
+            {
+                checkModuleTesting.Visible = false;
+                checkUnusedCode.Visible = false;
+            }
         }
     }
 }

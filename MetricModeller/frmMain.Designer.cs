@@ -99,11 +99,16 @@
             this.lblHighTransactionRates = new System.Windows.Forms.Label();
             this.lblHeavyHardwareUsage = new System.Windows.Forms.Label();
             this.lblFP = new System.Windows.Forms.Label();
+            this.checkHighlyModular = new System.Windows.Forms.CheckBox();
+            this.checkModuleTesting = new System.Windows.Forms.CheckBox();
+            this.checkUnusedCode = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbTeam.SuspendLayout();
             this.trkFrameworkPercentage.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbFramework.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkFramework)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbLang
@@ -215,7 +220,7 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(743, 695);
+            this.btnCalculate.Location = new System.Drawing.Point(716, 819);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(72, 54);
             this.btnCalculate.TabIndex = 20;
@@ -326,7 +331,7 @@
             this.gbTeam.Controls.Add(this.txtLinesPerHour);
             this.gbTeam.Controls.Add(this.lblAvgSalary);
             this.gbTeam.Controls.Add(this.label6);
-            this.gbTeam.Location = new System.Drawing.Point(40, 673);
+            this.gbTeam.Location = new System.Drawing.Point(26, 785);
             this.gbTeam.Name = "gbTeam";
             this.gbTeam.Size = new System.Drawing.Size(392, 141);
             this.gbTeam.TabIndex = 30;
@@ -335,6 +340,7 @@
             // 
             // trkFrameworkPercentage
             // 
+            this.trkFrameworkPercentage.Controls.Add(this.groupBox2);
             this.trkFrameworkPercentage.Controls.Add(this.groupBox1);
             this.trkFrameworkPercentage.Controls.Add(this.btnTest);
             this.trkFrameworkPercentage.Controls.Add(this.gbFramework);
@@ -374,7 +380,7 @@
             this.trkFrameworkPercentage.Controls.Add(this.lblHeavyHardwareUsage);
             this.trkFrameworkPercentage.Location = new System.Drawing.Point(26, 12);
             this.trkFrameworkPercentage.Name = "trkFrameworkPercentage";
-            this.trkFrameworkPercentage.Size = new System.Drawing.Size(789, 651);
+            this.trkFrameworkPercentage.Size = new System.Drawing.Size(789, 753);
             this.trkFrameworkPercentage.TabIndex = 31;
             this.trkFrameworkPercentage.TabStop = false;
             this.trkFrameworkPercentage.Text = "The Project";
@@ -388,7 +394,7 @@
             this.groupBox1.Controls.Add(this.txtStudentsEntry);
             this.groupBox1.Controls.Add(this.txtIntermediateExpert);
             this.groupBox1.Controls.Add(this.chkExperienceFactor);
-            this.groupBox1.Location = new System.Drawing.Point(27, 542);
+            this.groupBox1.Location = new System.Drawing.Point(13, 648);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(633, 74);
             this.groupBox1.TabIndex = 72;
@@ -482,7 +488,7 @@
             this.gbFramework.Controls.Add(this.cbFramework);
             this.gbFramework.Controls.Add(this.label8);
             this.gbFramework.Controls.Add(this.trkFramework);
-            this.gbFramework.Location = new System.Drawing.Point(27, 443);
+            this.gbFramework.Location = new System.Drawing.Point(13, 549);
             this.gbFramework.Margin = new System.Windows.Forms.Padding(2);
             this.gbFramework.Name = "gbFramework";
             this.gbFramework.Padding = new System.Windows.Forms.Padding(2);
@@ -980,11 +986,56 @@
             this.lblFP.Size = new System.Drawing.Size(0, 13);
             this.lblFP.TabIndex = 32;
             // 
+            // checkHighlyModular
+            // 
+            this.checkHighlyModular.AutoSize = true;
+            this.checkHighlyModular.Location = new System.Drawing.Point(16, 32);
+            this.checkHighlyModular.Name = "checkHighlyModular";
+            this.checkHighlyModular.Size = new System.Drawing.Size(96, 17);
+            this.checkHighlyModular.TabIndex = 8;
+            this.checkHighlyModular.Text = "Highly Modular";
+            this.checkHighlyModular.UseVisualStyleBackColor = true;
+            this.checkHighlyModular.CheckedChanged += new System.EventHandler(this.checkHighlyModular_CheckedChanged);
+            // 
+            // checkModuleTesting
+            // 
+            this.checkModuleTesting.AutoSize = true;
+            this.checkModuleTesting.Location = new System.Drawing.Point(118, 32);
+            this.checkModuleTesting.Name = "checkModuleTesting";
+            this.checkModuleTesting.Size = new System.Drawing.Size(99, 17);
+            this.checkModuleTesting.TabIndex = 73;
+            this.checkModuleTesting.Text = "Module Testing";
+            this.checkModuleTesting.UseVisualStyleBackColor = true;
+            this.checkModuleTesting.Visible = false;
+            // 
+            // checkUnusedCode
+            // 
+            this.checkUnusedCode.AutoSize = true;
+            this.checkUnusedCode.Location = new System.Drawing.Point(223, 32);
+            this.checkUnusedCode.Name = "checkUnusedCode";
+            this.checkUnusedCode.Size = new System.Drawing.Size(146, 17);
+            this.checkUnusedCode.TabIndex = 74;
+            this.checkUnusedCode.Text = "Will contain unused code";
+            this.checkUnusedCode.UseVisualStyleBackColor = true;
+            this.checkUnusedCode.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkHighlyModular);
+            this.groupBox2.Controls.Add(this.checkUnusedCode);
+            this.groupBox2.Controls.Add(this.checkModuleTesting);
+            this.groupBox2.Location = new System.Drawing.Point(13, 457);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(401, 75);
+            this.groupBox2.TabIndex = 75;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Resuability";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 666);
+            this.ClientSize = new System.Drawing.Size(842, 931);
             this.Controls.Add(this.lblFP);
             this.Controls.Add(this.gbTeam);
             this.Controls.Add(this.cbInterfaces);
@@ -1019,6 +1070,8 @@
             this.gbFramework.ResumeLayout(false);
             this.gbFramework.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkFramework)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1102,5 +1155,9 @@
         private System.Windows.Forms.TextBox txtStudentsEntry;
         private System.Windows.Forms.TextBox txtIntermediateExpert;
         private System.Windows.Forms.CheckBox chkExperienceFactor;
+        private System.Windows.Forms.CheckBox checkUnusedCode;
+        private System.Windows.Forms.CheckBox checkModuleTesting;
+        private System.Windows.Forms.CheckBox checkHighlyModular;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
