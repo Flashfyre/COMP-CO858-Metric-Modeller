@@ -276,5 +276,28 @@ namespace MetricModeller {
             txtNumOfPeople.Text = "6";
             cbTeamCohesion.SelectedIndex = 0;
         }
+
+
+        
+        private void chkExperienceFactor_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (chkExperienceFactor.Checked)
+            {
+                txtIntermediateExpert.Visible = true;
+                txtStudentsEntry.Visible = true;
+                lblIntermediateExpert.Visible = true;
+                lblPercent1.Visible = true;
+                lblPercent2.Visible = true;
+                lblStudentsEntry.Visible = true;                    
+            }
+           
+            
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
