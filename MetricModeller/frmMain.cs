@@ -73,7 +73,7 @@ namespace MetricModeller {
                 "Function Points: " + functionPoints + "\n" + 
                 "Total Lines: " + totalLines + "\n" +
                 "Cost: $" + Math.Round(cost, 2) + "\n" +
-                "Effort: " + Math.Round(effort, 2) + "\n" +
+                "Effort: " + Math.Round(effort, 2) + " person-months\n" +
                 "Duration: " + Math.Round(duration, 2) + " month(s)\n\n" +
                 "DOCUMENTATION\n" +
                 "Documentation Duration: " + docDuration + " month(s)\n" +
