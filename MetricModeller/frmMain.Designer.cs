@@ -235,7 +235,7 @@
             this.groupBox2.Size = new System.Drawing.Size(517, 114);
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Resuability";
+            this.groupBox2.Text = "Reusability";
             // 
             // checkHighlyModular
             // 
