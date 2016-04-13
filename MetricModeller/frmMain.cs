@@ -93,19 +93,25 @@ namespace MetricModeller {
                     if (histData.ContainsKey(cbLang.Text)) {
                         double[] data = histData[cbLang.Text];
                         int histTotalLines = (int)data[5],
-                        histNumOfPeople = (int)data[0];
-                        double histFunctionPoints = data[1],
-                        histDuration = data[2],
+                        histNumOfPeople = (int)data[0],
+                        histFunctionPoints = (int) data[1];
+                        double histDuration = data[2],
                         histCost = data[3],
                         histEffort = data[4],
                         linesOfCodeProportion =
                             (totalLines / functionPoints) / (histTotalLines / histFunctionPoints),
+                        durationProportionA = (functionPoints / duration / numOfPeople),
+                        durationProportionB = (histFunctionPoints / histDuration / histNumOfPeople),
+                        durationProportionDiff = (Math.Abs(durationProportionA - durationProportionB)),
                         durationProportion =
-                            ((duration) / functionPoints) / ((histDuration/0.75) / histFunctionPoints),
+                            (durationProportionDiff + (durationProportionA / durationProportionB)) /
+                            (durationProportionDiff + 1),
                         costProportion =
                             (cost / functionPoints) / (histCost / histFunctionPoints),
                         effortProportion =
                             (effort / functionPoints) / (histEffort / histFunctionPoints);
+                        functionPoints = (int) ((functionPoints * 9) + (int)(functionPoints * ((functionPoints / numOfPeople) /
+                            (histFunctionPoints / histNumOfPeople)))) / 10;
                         totalLines = (int)((double)totalLines * linesOfCodeProportion);
                         duration *= durationProportion;
                         cost *= costProportion;
