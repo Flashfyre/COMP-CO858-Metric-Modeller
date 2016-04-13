@@ -574,7 +574,7 @@
             // lblPercent2
             // 
             this.lblPercent2.AutoSize = true;
-            this.lblPercent2.Location = new System.Drawing.Point(588, 74);
+            this.lblPercent2.Location = new System.Drawing.Point(534, 80);
             this.lblPercent2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPercent2.Name = "lblPercent2";
             this.lblPercent2.Size = new System.Drawing.Size(23, 20);
@@ -585,7 +585,7 @@
             // lblPercent1
             // 
             this.lblPercent1.AutoSize = true;
-            this.lblPercent1.Location = new System.Drawing.Point(588, 25);
+            this.lblPercent1.Location = new System.Drawing.Point(534, 30);
             this.lblPercent1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPercent1.Name = "lblPercent1";
             this.lblPercent1.Size = new System.Drawing.Size(23, 20);
@@ -596,28 +596,28 @@
             // lblIntermediateExpert
             // 
             this.lblIntermediateExpert.AutoSize = true;
-            this.lblIntermediateExpert.Location = new System.Drawing.Point(226, 74);
+            this.lblIntermediateExpert.Location = new System.Drawing.Point(309, 77);
             this.lblIntermediateExpert.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIntermediateExpert.Name = "lblIntermediateExpert";
-            this.lblIntermediateExpert.Size = new System.Drawing.Size(184, 20);
+            this.lblIntermediateExpert.Size = new System.Drawing.Size(59, 20);
             this.lblIntermediateExpert.TabIndex = 4;
-            this.lblIntermediateExpert.Text = "Intermediate and Expert:";
+            this.lblIntermediateExpert.Text = "Expert:";
             this.lblIntermediateExpert.Visible = false;
             // 
             // lblStudentsEntry
             // 
             this.lblStudentsEntry.AutoSize = true;
-            this.lblStudentsEntry.Location = new System.Drawing.Point(226, 26);
+            this.lblStudentsEntry.Location = new System.Drawing.Point(279, 29);
             this.lblStudentsEntry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentsEntry.Name = "lblStudentsEntry";
-            this.lblStudentsEntry.Size = new System.Drawing.Size(191, 20);
+            this.lblStudentsEntry.Size = new System.Drawing.Size(91, 20);
             this.lblStudentsEntry.TabIndex = 3;
-            this.lblStudentsEntry.Text = "Students and Entry Level:";
+            this.lblStudentsEntry.Text = "Entry Level:";
             this.lblStudentsEntry.Visible = false;
             // 
             // txtStudentsEntry
             // 
-            this.txtStudentsEntry.Location = new System.Drawing.Point(432, 23);
+            this.txtStudentsEntry.Location = new System.Drawing.Point(378, 26);
             this.txtStudentsEntry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStudentsEntry.Name = "txtStudentsEntry";
             this.txtStudentsEntry.Size = new System.Drawing.Size(148, 26);
@@ -626,7 +626,7 @@
             // 
             // txtIntermediateExpert
             // 
-            this.txtIntermediateExpert.Location = new System.Drawing.Point(432, 71);
+            this.txtIntermediateExpert.Location = new System.Drawing.Point(378, 74);
             this.txtIntermediateExpert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIntermediateExpert.Name = "txtIntermediateExpert";
             this.txtIntermediateExpert.Size = new System.Drawing.Size(148, 26);
