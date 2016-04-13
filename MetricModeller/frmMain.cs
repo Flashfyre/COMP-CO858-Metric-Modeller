@@ -61,8 +61,10 @@ namespace MetricModeller {
             double duration;
             double docDuration;
             double docCost;
+            double teamFactor;
 
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
+            teamFactor = calculateTeamCohesion(numOfPeople) / numOfPeople;
             salary = getSalaryForTeam(numOfPeople, 32D);
 
             try {
@@ -99,7 +101,7 @@ namespace MetricModeller {
                         linesOfCodeProportion =
                             (totalLines / functionPoints) / (histTotalLines / histFunctionPoints),
                         durationProportion =
-                            (duration / functionPoints) / (histDuration / histFunctionPoints),
+                            ((duration) / functionPoints) / ((histDuration/0.75) / histFunctionPoints),
                         costProportion =
                             (cost / functionPoints) / (histCost / histFunctionPoints),
                         effortProportion =
@@ -388,15 +390,15 @@ namespace MetricModeller {
 
         private void btnTest_Click(object sender, EventArgs e) {
             cbLang.SelectedIndex = 1;
-            txtInput.Text = "2";
+            txtInput.Text = "10";
             cbInput.SelectedIndex = 0;
-            txtOutput.Text = "2";
+            txtOutput.Text = "10";
             cbOutput.SelectedIndex = 0;
-            txtInquiry.Text = "2";
+            txtInquiry.Text = "10";
             cbInquiry.SelectedIndex = 0;
-            txtMasterFiles.Text = "2";
+            txtMasterFiles.Text = "10";
             cbMasterFiles.SelectedIndex = 0;
-            txtInterfaces.Text = "2";
+            txtInterfaces.Text = "10";
             cbInterfaces.SelectedIndex = 0;
             cbDataComm.SelectedIndex = 0;
             cbDistributedData.SelectedIndex = 0;
@@ -414,7 +416,7 @@ namespace MetricModeller {
             cbReusability.SelectedIndex = 0;
             cbComplexity.SelectedIndex = 0;
             txtNumOfPeople.Text = "6";
-            cbTeamCohesion.SelectedIndex = 0;
+            cbTeamCohesion.SelectedIndex = 1;
             txtDocPages.Text = "80";
             txtWriters.Text = "4";
         }
