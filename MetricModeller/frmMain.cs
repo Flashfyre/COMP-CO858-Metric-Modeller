@@ -28,12 +28,14 @@ namespace MetricModeller {
         };
         #endregion Samuel's Code
 
+        #region Dylan's Code
         private readonly double[][] projectComplexity = new double[][]
         {
             new double[] {2.4, 1.05, 2.5, 0.38},
             new double[] {3.0, 1.12, 2.5, 0.35},
             new double[] {3.6, 1.20, 2.5, 0.32}
         };
+        #endregion Dylan's Code
 
         #region Samuel's Code
         public frmMain(Dictionary<string, Tuple<decimal, int>> langData,
@@ -43,13 +45,15 @@ namespace MetricModeller {
             InitializeComponent();
             populateLanguages();
         }
-        #endregion Samuel's Code
+        
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             calculateOutput(chkHistory.Checked);
         }
+        #endregion Samuel's Code
 
+        #region (Mostly) Dylan and Samuel's Code
         private void calculateOutput(bool useHistory) {
             int totalLines;
             int numOfPeople = 6;
@@ -64,14 +68,14 @@ namespace MetricModeller {
             double teamFactor;
 
             int.TryParse(txtNumOfPeople.Text, out numOfPeople);
-            teamFactor = calculateTeamCohesion(numOfPeople) / numOfPeople;
+            teamFactor = calculateTeamCohesion(numOfPeople) / numOfPeople; // Terry's Code
             salary = getSalaryForTeam(numOfPeople, 32D);
 
             try {
 
                 if (cbLang.SelectedIndex == -1)
                     return;
-                
+
                 languageAvg = langData[cbLang.SelectedItem.ToString()].Item2;
 
                 functionPoints = calculateFunctionPoints();
@@ -86,7 +90,7 @@ namespace MetricModeller {
 
                 docCost = calculateDocCost();
 
-                docDuration = calculateDocDuration();
+                docDuration = calculateDocDuration(); // Anuj's Code
 
                 #region Samuel's Code
                 if (useHistory) {
@@ -94,7 +98,7 @@ namespace MetricModeller {
                         double[] data = histData[cbLang.Text];
                         int histTotalLines = (int)data[5],
                         histNumOfPeople = (int)data[0],
-                        histFunctionPoints = (int) data[1];
+                        histFunctionPoints = (int)data[1];
                         double histDuration = data[2],
                         histCost = data[3],
                         histEffort = data[4],
@@ -110,7 +114,7 @@ namespace MetricModeller {
                             (cost / functionPoints) / (histCost / histFunctionPoints),
                         effortProportion =
                             (effort / functionPoints) / (histEffort / histFunctionPoints);
-                        functionPoints = (int) ((functionPoints * 9) + (int)(functionPoints * ((functionPoints / numOfPeople) /
+                        functionPoints = (int)((functionPoints * 9) + (int)(functionPoints * ((functionPoints / numOfPeople) /
                             (histFunctionPoints / histNumOfPeople)))) / 10;
                         totalLines = (int)((double)totalLines * linesOfCodeProportion);
                         duration *= durationProportion;
@@ -120,6 +124,7 @@ namespace MetricModeller {
                         MessageBox.Show(String.Format(
                             "Error: The selected language '%s' does not exist in the history file.", cbLang.Text));
                 }
+                #endregion Samuel's Code
                 MessageBox.Show(
                     "DEVELOPMENT\n" +
                     "Function Points: " + functionPoints + "\n" +
@@ -130,7 +135,6 @@ namespace MetricModeller {
                     "DOCUMENTATION\n" +
                     "Documentation Duration: " + docDuration + " month(s)\n" +
                     "Documentation Cost: $" + docCost + "\n");
-                #endregion Samuel's Code
             } catch (IndexOutOfRangeException e) {
             }
         }
@@ -147,13 +151,18 @@ namespace MetricModeller {
         {
             // Previous formula: cb * (effort) & db
             // Current formula: 2.5 * effort^EX
-            /*projectComplexity[cbComplexity.SelectedIndex][0] * (effort) *
-              projectComplexity[cbComplexity.SelectedIndex][1];*/
             return (projectComplexity[cbComplexity.SelectedIndex][2] *
                 Math.Pow(effort, projectComplexity[cbComplexity.SelectedIndex][3])) /
                 (calculateTeamCohesion(numOfPeople));
         }
 
+        private double calculateCost(double effort, double salary) {
+            // Old formula: manMonths * (salary / 12)
+            return effort * (salary * 120);
+        }
+        #endregion
+
+        #region Dylan's Code
         private int calculateTotalLines(double functionPoints, double languageAvg)
         {
             return (int)(functionPoints * languageAvg);
@@ -276,6 +285,14 @@ namespace MetricModeller {
             
             return (input * wInput) + (output * wOutput) + (inquiry * wInquiry) + (masterFiles * wMasterFiles) + (interfaces * wInterfaces);
         }
+
+        // Unused
+        private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople) {
+            return totalLines / (linesPerHour * calculateTeamCohesion(numOfPeople));
+        }
+        #endregion Dylan's Code
+
+        #region Terry's Code
         private double calculateTeamCohesion(int numOfPeople)
         {
             string coheSelect = cbTeamCohesion.Text;
@@ -294,7 +311,9 @@ namespace MetricModeller {
             }
             return numOfPeople * cohesionVal;
         }
+        #endregion Terry's Code
 
+        #region Anuj's Code
         private double calculateDocDuration()
         {
            double pages = Convert.ToDouble(txtDocPages.Text);
@@ -313,17 +332,7 @@ namespace MetricModeller {
             int cost = dur * wage;
             return cost;
         }
-
-        private double calculateManMonths(double totalLines, int linesPerHour, int numOfPeople)
-        {
-            return totalLines / (linesPerHour * calculateTeamCohesion(numOfPeople));
-        }
-
-        private double calculateCost(double effort, double salary)
-        {
-            //manMonths * (salary / 12)
-            return effort * (salary * 120);
-        }
+        #endregion Anuj's Code
 
         #region Samuel's Code
         private double getFrameworkProductivityMultiplier() {
@@ -428,6 +437,7 @@ namespace MetricModeller {
         }
         #endregion Samuel's Code
 
+        #region Gururaj's Code
         private void chkExperienceFactor_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -451,6 +461,7 @@ namespace MetricModeller {
             }
 
         }
+        
 
         private double getDurationForTeam(int numOfPeople, double duration)
         {
@@ -492,7 +503,9 @@ namespace MetricModeller {
 
             return salary;
         }
+        #endregion Gururaj's Code
 
+        #region Dylan's Code
         private void checkHighlyModular_CheckedChanged(object sender, EventArgs e)
         {
             if(checkHighlyModular.Checked)
@@ -506,5 +519,6 @@ namespace MetricModeller {
                 checkUnusedCode.Visible = false;
             }
         }
+        #endregion Dylan's Code
     }
 }
